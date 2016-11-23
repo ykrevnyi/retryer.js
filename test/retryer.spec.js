@@ -164,10 +164,20 @@ test('Retryer Spec', t => {
       });
   });
 
+  t.test('sets default notifiers on DEBUG flag', t => {
+    const retryer = getRetryer({debug: true});
+    const retry = retryer.retry;
+    const spies = retryer.spies;
+
+    t.equal(typeof retryer.instance._onStart, 'function');
+    t.equal(typeof retryer.instance._onError, 'function');
+    t.end();
+  });
+
 });
 
-function getRetryer() {
-  const retryer = new DebugRetryer(null);
+function getRetryer(options) {
+  const retryer = new DebugRetryer(null, options);
 
   function retry(promise, options) {
     options = options || {};
@@ -183,6 +193,7 @@ function getRetryer() {
 
   return {
     retry,
+    instance: retryer,
     spies: retryer.getSpies()
   };
 }

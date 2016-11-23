@@ -1,4 +1,6 @@
 import Promise from 'bluebird';
+import debugStartNotifier from './notifiers/debugStartNotifier';
+import debugErrorNotifier from './notifiers/debugErrorNotifier';
 
 export default class Retryer {
 
@@ -10,8 +12,8 @@ export default class Retryer {
 
     this._total = options.total || 10;
     this._timeout = options.timeout || 1000;
-    this._onStart = options.onStart || function() {};
-    this._onError = options.onError || function() {};
+
+    this._setNotifiers(options);
   }
 
   retry() {
@@ -21,6 +23,17 @@ export default class Retryer {
     return this._promise()
       .then(this._handleSuccess.bind(this))
       .catch(this._handleError.bind(this));
+  }
+
+  _setNotifiers(options) {
+    if (options.debug) {
+      this._onStart = debugStartNotifier;
+      this._onError = debugErrorNotifier;
+      return;
+    }
+
+    this._onStart = options.onStart || function() {};
+    this._onError = options.onError || function() {};
   }
 
   /**

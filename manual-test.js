@@ -8,14 +8,7 @@ function promise() {
   return mongoose.connect('mongodb://mongodb/test-db');
 }
 
-retry(promise, {
-  onStart: tick => {
-    console.log(`Starting ${tick}`);
-  },
-  onError: (err, tick) => {
-    console.log(`Got error for ${tick}`);
-  }
-})
+retry(promise, {debug: true})
   .then(data => {
     console.log('connected!', data);
   })
