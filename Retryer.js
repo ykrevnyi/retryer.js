@@ -18,20 +18,39 @@ export default class Retryer {
       .catch(this._handleError.bind(this));
   }
 
+  /**
+   * If promise succeeded - this method will be executed.
+   *
+   * @param  {Object} data Original response object
+   * @return {Object}      Same object without changes
+   */
   _handleSuccess(data) {
     return data;
   }
 
+  /**
+   * If promise failed - this method will be executed.
+   *
+   * @param  {Object} err Original error
+   * @return {Object}     Promise
+   */
   _handleError(err) {
-    this.increateAttmpt();
+    this._increateAttempt();
 
-    if (this.isLastAttempt()) {
+    if (this._isLastAttempt()) {
       throw err;
     }
 
+    // It's not the last attempt -> retry promise now
     return this._backoff();
   }
 
+  /**
+   * Custom retry scheduler.
+   * Defines period of time when promise will be retried.
+   *
+   * @return {Object} Promise
+   */
   _backoff() {
     let timerId;
 
@@ -43,11 +62,21 @@ export default class Retryer {
     });
   }
 
-  increateAttmpt() {
+  /**
+   * Simply increment attempt
+   *
+   * @return {void}
+   */
+  _increateAttempt() {
     this._current++;
   }
 
-  isLastAttempt() {
+  /**
+   * Check if current attempt is the last one.
+   *
+   * @return {Boolean}
+   */
+  _isLastAttempt(asdf) {
     return this._current >= this._total;
   }
 

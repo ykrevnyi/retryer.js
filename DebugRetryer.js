@@ -1,6 +1,12 @@
 import Retryer from './Retryer';
 import sinon from 'sinon';
 
+/**
+ * Test helper.
+ *
+ * This class only defines few spies for testing purposes.
+ * Does not have any additinal functional.
+ */
 export default class DebugRetryer extends Retryer {
 
   constructor(promise, options) {
