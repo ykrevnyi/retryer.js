@@ -8,11 +8,16 @@ export default class Retryer {
     this._promise = promise;
     this._current = 0;
 
-    this._total = 0 || options.total;
-    this._timeout = 0 || options.timeout;
+    this._total = options.total || 10;
+    this._timeout = options.timeout || 1000;
+    this._onStart = options.onStart || function() {};
+    this._onError = options.onError || function() {};
   }
 
   retry() {
+    // _current starts from "0" -> so add 1 to start with "1"
+    this._onStart(this._current + 1);
+
     return this._promise()
       .then(this._handleSuccess.bind(this))
       .catch(this._handleError.bind(this));
@@ -35,6 +40,8 @@ export default class Retryer {
    * @return {Object}     Promise
    */
   _handleError(err) {
+    // _current starts from "0" -> so add 1 to start with "1"
+    this._onError(err, this._current + 1);
     this._increateAttempt();
 
     if (this._isLastAttempt()) {

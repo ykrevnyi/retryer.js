@@ -36,7 +36,7 @@ test('Retryer Spec', t => {
 
     const promise = rejectPromise();
 
-    retry(promise, 2)
+    retry(promise, {total: 2})
       .then(data => {
         t.fail('Promise should not be resolved')
       })
@@ -76,7 +76,7 @@ test('Retryer Spec', t => {
 
     let promise = failingPromise(5);
 
-    retry(promise, 3)
+    retry(promise, {total: 3})
       .then(data => {
         t.fail('Promise should not be resolved');
       })
@@ -96,7 +96,7 @@ test('Retryer Spec', t => {
 
     let promise = failingPromise(4);
 
-    retry(promise, 5)
+    retry(promise, {total: 5})
       .then(data => {
         t.equal(spies.init.callCount, 1);
         t.equal(spies.tick.callCount, 5, 'tick');
@@ -116,7 +116,7 @@ test('Retryer Spec', t => {
 
     let promise = failingPromise(6);
 
-    retry(promise, 5)
+    retry(promise, {total: 5})
       .then(err => {
         t.fail('Promise should not be resolved.');
       })
@@ -129,15 +129,54 @@ test('Retryer Spec', t => {
       });
   });
 
+  t.test('notifies notifiers with correct values', t => {
+    const retryer = getRetryer();
+    const retry = retryer.retry;
+    const spies = retryer.spies;
+
+    let promise = failingPromise(4);
+    let onError = sinon.spy();
+    let onStart = sinon.spy();
+
+    retry(promise, {
+      total: 5,
+      onError,
+      onStart
+    })
+      .then(data => {
+        t.equal(onStart.callCount, 5);
+        t.equal(onError.callCount, 4);
+
+        // Check if notifiers received correct values
+        t.same(onStart.args, [[1], [2], [3], [4], [5]]);
+        t.same(onError.args, [
+            ['reject 1', 1],
+            ['reject 2', 2],
+            ['reject 3', 3],
+            ['reject 4', 4]
+          ]
+        );
+
+        t.end();
+      })
+      .catch(err => {
+        t.fail('Promise should be resolved.');
+      });
+  });
+
 });
 
 function getRetryer() {
   const retryer = new DebugRetryer(null);
 
-  function retry(promise, total, timeout) {
+  function retry(promise, options) {
+    options = options || {};
+
     retryer._promise = promise;
-    retryer._total = total || 10;
-    retryer._timeout = timeout || 100;
+    retryer._total = options.total || 10;
+    retryer._timeout = options.timeout || 100;
+    retryer._onStart = options.onStart || function() {};
+    retryer._onError = options.onError || function() {};
 
     return retryer.retry();
   }
