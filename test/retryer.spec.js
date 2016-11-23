@@ -1,6 +1,7 @@
 import test from 'tape';
 import sinon from 'sinon';
 import Promise from 'bluebird';
+import DebugRetryer from '../DebugRetryer';
 
 test('Retryer Spec', t => {
 
@@ -25,7 +26,7 @@ test('Retryer Spec', t => {
         t.equal(spies.success.callCount, 1);
         t.end();
       })
-      .catch(err => t.fail('Promise should be resolved'));
+      .catch(err => t.fail('Promise should be resolved', err));
   });
 
   t.test('rejectes promise', t => {
@@ -121,9 +122,9 @@ test('Retryer Spec', t => {
       })
       .catch(data => {
         t.equal(spies.init.callCount, 1);
-        t.equal(spies.tick.callCount, 5, 'tick');
-        t.equal(spies.error.callCount, 4, 'error');
-        t.equal(spies.success.callCount, 0, 'success');
+        t.equal(spies.tick.callCount, 5);
+        t.equal(spies.error.callCount, 4);
+        t.equal(spies.success.callCount, 0);
         t.end();
       });
   });
@@ -131,21 +132,20 @@ test('Retryer Spec', t => {
 });
 
 function getRetryer() {
-  let i = 0;
-  const retryer = require('../DebugRetryer');
-  const spies = {
-    init: sinon.spy(),
-    error: sinon.spy(),
-    tick: sinon.spy(),
-    success: sinon.spy()
-  };
+  const retryer = new DebugRetryer(null);
 
-  retryer.debug.spies = spies;
+  function retry(promise, total, timeout) {
+    retryer._promise = promise;
+    retryer._total = total || 10;
+    retryer._timeout = timeout || 100;
+
+    return retryer.retry();
+  }
 
   return {
-    retry: retryer,
-    spies: spies
-  }
+    retry,
+    spies: retryer.getSpies()
+  };
 }
 
 function failingPromise(totaFails) {
