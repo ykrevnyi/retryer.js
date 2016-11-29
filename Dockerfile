@@ -1,6 +1,6 @@
 FROM node:7.1.0
 
-ENV service=api
+ENV service=retryer
 ENV appPath=/home/app
 
 RUN useradd --user-group --create-home --shell /bin/false app

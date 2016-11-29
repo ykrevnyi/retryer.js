@@ -7,6 +7,11 @@ export default class Retryer {
   constructor(promise, options) {
     options = options || {};
 
+    // Turn debug mode on by default
+    if (options.debug === undefined) {
+      options.debug = true;
+    }
+
     this._promise = promise;
     this._current = 0;
 

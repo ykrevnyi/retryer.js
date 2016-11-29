@@ -1,15 +1,15 @@
 version: '2.0'
 services:
 
-  api:
+  retryer:
     build: .
     depends_on:
       - mongodb
     environment:
       - NODE_ENV=test
     volumes:
-      - ./:/home/app/api
-      - /home/app/api/node_modules
+      - ./:/home/app/retryer
+      - /home/app/retryer/node_modules
 
   mongodb:
     image: mongo:3.2.8
