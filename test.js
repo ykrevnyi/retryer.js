@@ -10,7 +10,7 @@ function failingPromise(totaFails) {
       return Promise.resolve('success');
     }
 
-    return Promise.reject(`reject ${iteration}`);
+    return Promise.reject(`cannot connect to site.com`);
   }
 }
 
@@ -23,9 +23,9 @@ const myPromise = failingPromise(3);
 // }
 
 // STEP 3: Pass that function as first argument
-retry(myPromise)
+retry(myPromise, {timeout: 1500})
   .then(data => {
-    console.log(`[+] Retryer: promise has been resolved :)`);
+    console.log(`\n🎉 Promise has been resolved 🎉`);
   })
   .catch(err => {
     console.log('Promise failed :(', err);

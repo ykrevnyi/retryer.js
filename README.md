@@ -1,10 +1,10 @@
 # Retryer
 
-An extremely simple (and customizeable) promise retryer.
+An extremely simple (and customizeable) promise retryer for javascript.
 
 ```javascript
 // STEP 1: Your promise
-const myPromise = Bluebird.resolve();
+const myPromise = ..;
 
 // STEP 2: Create a function that returns myPromise
 function promise() {
