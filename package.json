@@ -16,9 +16,11 @@
     "sinon": "^1.17.6"
   },
   "scripts": {
-    "start": "babel-node index",
+    "start": "babel-node send-request.js",
     "test": "tape -r babel-register test/**/*.spec.js | faucet",
-    "test0": "tape -r babel-register test/**/*.spec.js"
+    "test0": "tape -r babel-register test/**/*.spec.js",
+    "build": "babel src -d dist",
+    "send-request": "babel-node send-request.js"
   },
   "repository": {
     "type": "git",

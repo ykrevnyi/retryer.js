@@ -1,4 +1,4 @@
-import Retryer from './src/Retryer';
+import Retryer from './Retryer';
 
 export default function retry(promise, options) {
   const retryer = new Retryer(promise, options);

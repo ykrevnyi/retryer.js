@@ -1,6 +1,6 @@
-import Promise from 'bluebird';
-import mongoose from 'mongoose';
-import retry from './index';
+const Promise = require('bluebird');
+const mongoose = require('mongoose');
+const retry = require('./dist/index').default;
 
 function failingPromise(totaFails) {
   let iteration = 0;
@@ -30,3 +30,6 @@ retry(myPromise, {timeout: 1500})
   .catch(err => {
     console.log('Promise failed :(', err);
   });
+
+
+setTimeout(() => {}, 60 * 1000)
