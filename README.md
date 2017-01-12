@@ -31,6 +31,8 @@ Or bower, too.
 bower install retryer --save
 ```
 
+Or just [download a ZIP file.](https://github.com/ykrevnyi/reconnect/archive/master.zip)
+
 ## Usage
 
 <p align="center">
