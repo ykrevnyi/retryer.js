@@ -33,6 +33,20 @@ bower install retryer --save
 
 Or just [download a ZIP file.](https://github.com/ykrevnyi/reconnect/archive/master.zip)
 
+## Examples
+
+Take a look at our many examples:
+
+- [`basic`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/basic.js): The easiest way to get started
+- [`hello-world`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/hello-world.js): Shows the differences with and without using retryer
+- [`async/await`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/async-await.js): Using async/await with retryer
+- [`mongoose`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/mongoose.js): Establish connection with mongodb
+- [`mongodb`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/mongodb.js): Connect to mongodb
+- [`redis`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/redis.js): ..
+- [`rabbitmq`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/rabbitmq.js): ..
+- [`react`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/rabbitmq.js): ..
+- [`angular`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/rabbitmq.js): ..
+
 ## Available Options
 
 ```javascript
@@ -51,20 +65,6 @@ const options = {
 
 retry(promise, options);
 ```
-
-## Examples
-
-Take a look at our many examples:
-
-- [`basic`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/basic.js): The easiest way to get started
-- [`hello-world`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/hello-world.js): Shows the differences with and without using retryer
-- [`async/await`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/async-await.js): Using async/await with retryer
-- [`mongoose`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/mongoose.js): Establish connection with mongodb
-- [`mongodb`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/mongodb.js): Connect to mongodb
-- [`redis`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/redis.js): ..
-- [`rabbitmq`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/rabbitmq.js): ..
-- [`react`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/rabbitmq.js): ..
-- [`angular`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/rabbitmq.js): ..
 
 <p align="center">
   <b>basic</b> &bull;
