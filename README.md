@@ -33,7 +33,19 @@ bower install retryer --save
 
 Or just [download a ZIP file.](https://github.com/ykrevnyi/reconnect/archive/master.zip)
 
-## Usage
+## Available Options
+
+```javascript
+const options = {
+  debug   : Boolean,    // (Optional) Log debug information
+  total   : Number,     // (Optional) Number of attempts
+  timeout : Number      // (Optional) Backoff timeout
+};
+
+retry(promise, options);
+```
+
+## Examples
 
 <p align="center">
   <b>basic</b> &bull;
