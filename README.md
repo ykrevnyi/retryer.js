@@ -70,6 +70,12 @@ const options = {
 retry(promise, options);
 ```
 
+## Need Help?
+Please submit an issue on GitHub and provide information about your setup.
+
+## License
+This project is licensed under the terms of the MIT license. See the LICENSE file.
+
 <p align="center">
   <b>basic</b> &bull;
   <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/hello-world.js">hello-world</a> &bull;
@@ -81,9 +87,3 @@ retry(promise, options);
   <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/react.js">react</a> &bull;
   <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/react.js">async/await</a>
 </p>
-
-## Need Help?
-Please submit an issue on GitHub and provide information about your setup.
-
-## License
-This project is licensed under the terms of the MIT license. See the LICENSE file.
