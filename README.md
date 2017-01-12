@@ -19,6 +19,16 @@ bower install retryer --save
 
 ## Usage
 
+<p align="center">
+  <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/hello-world.js">hello-world</a> &bull;
+  <b>request</b> &bull;
+  <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/mongoose.js">mongoose</a> &bull;
+  <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/mongodb.js">mongodb</a> &bull;
+  <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/redis.js">redis</a> &bull;
+  <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/angular.js">angular</a> &bull;
+  <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/react.js">react</a> &bull;
+</p>
+
 ```javascript
 // STEP 1: create function that returns promise
 function sendRequest() {
@@ -30,3 +40,5 @@ retry(sendRequest)
   .then(data => console.log('success'))
   .catch(error => console.log('error'))
 ```
+
+Checkout [full example here]().
