@@ -83,7 +83,7 @@ retry(promise, options);
 </p>
 
 ## Need Help?
-Please submit an issue on GitHub and provide information about your setup
+Please submit an issue on GitHub and provide information about your setup.
 
 ## License
 This project is licensed under the terms of the MIT license. See the LICENSE file.
