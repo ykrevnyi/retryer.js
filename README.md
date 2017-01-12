@@ -2,7 +2,7 @@
 
 `retryer` is a tiny library that enables you to retry any action (ex. request).
 
-![retryer.js-intro](https://github.com/ykrevnyi/reconnect/blob/docs/docs/retryer-v1.4.gif)
+![retryer.js-intro](https://github.com/ykrevnyi/reconnect/blob/docs/docs/retryer-v1.5.gif)
 
 ## Install
 You can get it on npm.
