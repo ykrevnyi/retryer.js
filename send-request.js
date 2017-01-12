@@ -25,7 +25,8 @@ const myPromise = failingPromise(3);
 // STEP 3: Pass that function as first argument
 retry(myPromise, {timeout: 1500})
   .then(data => {
-    console.log(`\n🎉 Promise has been resolved 🎉`, data);
+    setTimeout(() => console.log('Connected 🎉'), 500)
+    // console.log('Connected 🎉');
   })
   .catch(err => {
     console.log('Promise failed :(', err);
