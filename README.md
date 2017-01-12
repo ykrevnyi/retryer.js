@@ -51,16 +51,20 @@ Take a look at our many examples:
 
 ```javascript
 const options = {
-  debug   : Boolean,    // (Optional) Log debug information
-  total   : Number,     // (Optional) Number of attempts
-  timeout : Number      // (Optional) Backoff timeout (in ms)
+  debug     : Boolean,    // (Optional) Log debug information
+  total     : Number,     // (Optional) Number of attempts
+  timeout   : Number      // (Optional) Backoff timeout (in ms)
+  _onStart  : Function    // (Optional) This function will be triggered on start of each attempt
+  _onError  : Function    // (Optional) This function will be triggered on error of each attempt
 };
 
 // Example:
 // const options = {
 //   debug: true,
 //   total: 5,
-//   timeout: 1500
+//   timeout: 1500,
+//   _onStart: attempt => {},
+//   _onError: (err, attempt) => {}
 // };
 
 retry(promise, options);
