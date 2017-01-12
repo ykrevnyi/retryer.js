@@ -9,7 +9,7 @@
 ```javascript
 // STEP 1: create function that returns promise
 function sendRequest() {
-   return request('http://mysite.com/')
+   return request('http://site.com/')
 }
 
 // STEP 2: Pass that function to the retry(FUNCTION_NAME)
