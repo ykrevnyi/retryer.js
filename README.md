@@ -54,6 +54,8 @@ retry(promise, options);
 
 ## Examples
 
+Take a look at our many examples:
+
 - [`basic`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/basic.js): The easiest way to get started
 - [`hello-world`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/hello-world.js): Shows the differences with and without using retryer
 - [`async/await`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/async-await.js): Using async/await with retryer
