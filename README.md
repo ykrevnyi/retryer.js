@@ -4,7 +4,18 @@
 
 ![retryer.js-intro](https://github.com/ykrevnyi/reconnect/blob/master/docs/retryer-v1.3.1.gif)
 
-Usage example:
+## Install
+You can get it on npm.
+```javascript
+npm install retryer --save
+```
+
+Or bower, too.
+```javascript
+bower install retryer --save
+```
+
+## Usage
 
 ```javascript
 // STEP 1: create function that returns promise
