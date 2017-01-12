@@ -39,8 +39,15 @@ Or just [download a ZIP file.](https://github.com/ykrevnyi/reconnect/archive/mas
 const options = {
   debug   : Boolean,    // (Optional) Log debug information
   total   : Number,     // (Optional) Number of attempts
-  timeout : Number      // (Optional) Backoff timeout
+  timeout : Number      // (Optional) Backoff timeout (in ms)
 };
+
+// Example:
+// const options = {
+//   debug: true,
+//   total: 5,
+//   timeout: 1500
+// };
 
 retry(promise, options);
 ```
@@ -56,4 +63,5 @@ retry(promise, options);
   <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/redis.js">redis</a> &bull;
   <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/angular.js">angular</a> &bull;
   <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/react.js">react</a> &bull;
+  <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/react.js">async/await</a>
 </p>
