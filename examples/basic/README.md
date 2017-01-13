@@ -43,6 +43,21 @@ retry(myPromise)
 ```
 <h5 align="center">Full example is in <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/basic/index.js">index.js file</a></h5>
 
+## Prefer diff?
+```diff
+import request from 'request-promise';
+import retry from 'retryer';
+
++function sendRequest() {
++   return request('http://site.com/')
++}
+
+-request('http://site.com/')
++retry(sendRequest)
+  .then(data => console.log('Connected 🎉'))
+  .catch(error => console.log('error'))
+```
+
 ## Test it yourself
 Here at Jsbin
 
@@ -91,21 +106,6 @@ request('http://site.com/')
 retry(myPromise)
   .then(..)
   .catch(..)
-```
-
-## Prefer diff?
-```diff
-import request from 'request-promise';
-import retry from 'retryer';
-
-+function sendRequest() {
-+   return request('http://site.com/')
-+}
-
--request('http://site.com/')
-+retry(sendRequest)
-  .then(data => console.log('Connected <U+1F389>'))
-  .catch(error => console.log('error'))
 ```
 
 ## Need Help?
