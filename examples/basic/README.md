@@ -1,6 +1,10 @@
 # retryer.js
 
 <p align="center">
+  <strong>retryer.js examples</strong>
+</p>
+
+<p align="center">
   <b>basic</b> &bull;
   <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/hello-world.js">hello-world</a> &bull;
   <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/request.js">request</a> &bull;
