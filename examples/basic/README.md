@@ -111,5 +111,17 @@ retry(sendRequest)
   .catch(..)
 ```
 
+Want to see `diff`?
+```diff
++function sendRequest() {
++  return request('http://site.com/');
++}
+
+-request('http://site.com/')
++retry(sendRequest)
+  .then(..)
+  .catch(..)
+```
+
 ## Need Help?
 Please submit an issue on GitHub and provide information about your setup.
