@@ -93,5 +93,20 @@ retry(myPromise)
   .catch(..)
 ```
 
+## Prefer diff?
+```diff
+import request from 'request-promise';
+import retry from 'retryer';
+
++function sendRequest() {
++   return request('http://site.com/')
++}
+
+-request('http://site.com/')
++retry(sendRequest)
+  .then(data => console.log('Connected <U+1F389>'))
+  .catch(error => console.log('error'))
+```
+
 ## Need Help?
 Please submit an issue on GitHub and provide information about your setup.
