@@ -92,3 +92,6 @@ retry(myPromise)
   .then(..)
   .catch(..)
 ```
+
+## Need Help?
+Please submit an issue on GitHub and provide information about your setup.
