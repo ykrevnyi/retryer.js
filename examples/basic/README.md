@@ -12,3 +12,40 @@
   <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/react.js">react</a> &bull;
   <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/react.js">async/await</a>
 </p>
+
+In this example we will take a look at the most basic request retry.
+
+Given you have code like this:
+
+```javascript
+// Send request to the http://site.com/
+request('http://site.com/')
+  .then(data => console.log('Connected 🎉'))
+  .catch(error => console.log('error'))
+```
+
+In order to retry that request - just wrap your promise into function (in our case its `request('http://site.com/')`):
+
+```javascript
+// before
+request('http://site.com/');
+
+// after
+function myPromise() {
+  return request('http://site.com/');
+}
+```
+
+And then call it:
+```javascript
+// before
+request('http://site.com/')
+  .then(..)
+  .catch(..)
+
+// after
+// Notice that we pass `myPromise` and NOT `myPromise()`
+retry(myPromise)
+  .then(..)
+  .catch(..)
+```
