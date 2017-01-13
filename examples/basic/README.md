@@ -32,12 +32,12 @@ request('http://site.com/')
 
 ### With `retryer` it looks like
 ```javascript
-function myPromise() {
+function sendRequest() {
   // Send request to the http://site.com/
   return request('http://site.com/')
 }
 
-retry(myPromise)
+retry(sendRequest)
   .then(data => console.log('Connected 🎉'))
   .catch(error => console.log('error'))
 ```
@@ -86,7 +86,7 @@ In order to retry request - just wrap your `promise`(in our case its `request('h
 request('http://site.com/');
 
 // after
-function myPromise() {
+function sendRequest() {
   return request('http://site.com/');
 }
 ```
@@ -99,8 +99,8 @@ request('http://site.com/')
   .catch(..)
 
 // after
-// Notice that we pass `myPromise` and NOT `myPromise()`
-retry(myPromise)
+// Notice that we pass `sendRequest` and NOT `sendRequest()`
+retry(sendRequest)
   .then(..)
   .catch(..)
 ```
