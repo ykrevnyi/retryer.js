@@ -37,7 +37,7 @@ Pass an `options` object as a `second` argument.
 // Syntax
 retry(fn, OPTIONS);
 
-// Example: retry request 5 times with 1.5s timeout
+// Example: retry request 3 times with 2.5s timeout
 // const options = {
 //   debug: false,
 //   timeout: 2500,
