@@ -1,6 +1,6 @@
 # retryer.js
 
-`retryer` is a tiny library that enables you to retry requests.
+`retryer` is a tiny library that enables you to retry promises.
 
 <p align="center">
   <img src="https://github.com/ykrevnyi/reconnect/blob/docs/docs/retryer-v1.5.1.gif" alt="retryer.js intro"/>
@@ -18,7 +18,7 @@ retry(sendRequest)
   .catch(error => console.log('error'))
 ```
 
-<h5 align="center">Checkout <a href="#">full example here.</a></h5>
+<h5 align="center">Checkout <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/basic">full example here.</a></h5>
 
 ## Install
 You can get it on npm.
