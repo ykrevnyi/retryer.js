@@ -7,6 +7,7 @@ function sendRequest() {
 }
 
 // STEP 2: Pass that function to the retry(FUNCTION_NAME)
+//         Notice that we pass `sendRequest` and NOT `sendRequest()`
 retry(sendRequest)
   .then(data => console.log('Connected 🎉'))
   .catch(error => console.log('error'))
