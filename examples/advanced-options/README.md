@@ -2,25 +2,34 @@
 <h1 align="center">retryer.js examples</h1>
 
 <p align="center">
-  <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/basic/">basic</a> &bull;
-  <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/hello-world/">hello-world</a> &bull;
-  <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/request/">request</a> &bull;
-  <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/mongoose/">mongoose</a> &bull;
-  <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/mongodb/">mongodb</a> &bull;
-  <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/redis/">redis</a> &bull;
-  <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/angular/">angular</a> &bull;
-  <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/react/">react</a> &bull;
-  <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/async-await/">async/await</a> &bull;
-  <b>advanced-options</b>
+  <b>basic</b> &bull;
+  <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/hello-world">hello-world</a> &bull;
+  <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/request">request</a> &bull;
+  <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/mongoose">mongoose</a> &bull;
+  <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/mongodb">mongodb</a> &bull;
+  <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/redis">redis</a> &bull;
+  <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/angular">angular</a> &bull;
+  <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/react">react</a> &bull;
+  <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/async-await">async/await</a> &bull;
+  <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/advanced-options">advanced-options</a>
 </p>
 
 <p align="center">
   <img src="https://github.com/ykrevnyi/reconnect/blob/docs/docs/retryer-v1.5.1.gif" alt="retryer.js intro"/>
 </p>
 
-In this `basic` example we will take a look at the most simple request retry.
+In the `advanced-options` examples we will configure all available options for `retryer`.
 
-## Quick Start
+## Available Options
+|-|-|-|
+|a|b|c|
+```
+debug     : Boolean,    // (Optional) Log debug information
+total     : Number,     // (Optional) Number of attempts
+timeout   : Number      // (Optional) Backoff timeout (in ms)
+_onStart  : Function    // (Optional) This function will be triggered on start of each attempt
+_onError  : Function    // (Optional) This function will be triggered on error of each attempt
+```
 
 ### Given you have code:
 
