@@ -38,8 +38,29 @@ retry(myPromise)
   .catch(error => console.log('error'))
 ```
 
+## Test it yourself
+Clone GitHub repository.
+```bash
+git clone https://github.com/ykrevnyi/retryer.js
+```
+
+Open `basic` example.
+```bash
+cd retryer.js/examples/basic
+```
+
+Install dependencies.
+```bash
+npm install
+```
+
+Start `basic` example.
+```bash
+npm start
+```
+
 ## A bit of explanation
-In order to retry that request - just wrap your promise into function (in our case its `request('http://site.com/')`):
+In order to retry request - just wrap your `promise`(in our case its `request('http://site.com/')`) into function:
 
 ```javascript
 // before
