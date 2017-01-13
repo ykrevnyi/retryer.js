@@ -38,7 +38,7 @@ retry(myPromise)
   .catch(error => console.log('error'))
 ```
 
-## Test it yourself
+## Run `basic` example
 Clone GitHub repository.
 ```bash
 git clone https://github.com/ykrevnyi/retryer.js
