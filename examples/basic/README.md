@@ -13,7 +13,11 @@
   <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/react.js">async/await</a>
 </p>
 
-In this `basic` example we will take a look at the most basic request retry.
+<p align="center">
+  <img src="https://github.com/ykrevnyi/reconnect/blob/docs/docs/retryer-v1.5.1.gif" alt="retryer.js intro"/>
+</p>
+
+In this `basic` example we will take a look at the most simple request retry.
 
 ## Quick Start
 
@@ -37,10 +41,6 @@ retry(myPromise)
   .then(data => console.log('Connected 🎉'))
   .catch(error => console.log('error'))
 ```
-
-<p align="center">
-  <img src="https://github.com/ykrevnyi/reconnect/blob/docs/docs/retryer-v1.5.1.gif" alt="retryer.js intro"/>
-</p>
 <h5 align="center">Full example is in <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/basic/index.js">index.js file</a></h5>
 
 ## Test it yourself
