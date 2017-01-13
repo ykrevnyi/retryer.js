@@ -5,7 +5,6 @@
 function sendRequest() {
    return request('http://site.com/')
 }
-
 // STEP 2: Pass that function to the retry(FUNCTION_NAME)
 retry(sendRequest)
   .then(data =&gt; console.log('Connected 🎉'))
