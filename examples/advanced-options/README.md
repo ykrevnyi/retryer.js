@@ -39,8 +39,11 @@ retry(fn, OPTIONS);
 
 // Example: retry request 5 times with 1.5s timeout
 // const options = {
-//   timeout: 1500,
-//   total: 5
+//   debug: false,
+//   timeout: 2500,
+//   total: 3,
+//   function(attempt) {..},
+//   function(err, attempt) {..}
 // };
 //
 // retry(sendRequest, options);
