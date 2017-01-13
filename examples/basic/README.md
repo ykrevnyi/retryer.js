@@ -1,8 +1,6 @@
 
 <h1 align="center">retryer.js examples</h1>
 
----
-
 <p align="center">
   <b>basic</b> &bull;
   <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/hello-world.js">hello-world</a> &bull;
