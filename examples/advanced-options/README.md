@@ -38,12 +38,12 @@ Pass an `options` object as a `second` argument.
 retry(fn, OPTIONS);
 
 // Example: retry promise 5 times with 1.5s timeout
-const options = {
-  timeout: 1500,
-  total: 5
-};
-
-retry(fn, options);
+// const options = {
+//   timeout: 1500,
+//   total: 5
+// };
+//
+// retry(fn, options);
 ```
 
 ## Need Help?
