@@ -29,6 +29,14 @@ In the `advanced-options` examples we will configure all available options for `
 `_onStart`|`Function`|`function(attempt) {..}`|Is triggered on start for each attempt
 `_onError`|`Function`|`function(error, attempt) {..}`|Is triggered on error for each attempt
 
+<h5 align="center">There are examples available for each option:</h5>
+<p align="center">
+  <b><a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/advanced-options/options-debug.js">options-debug.js file</a></b>
+  <b><a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/advanced-options/options-total.js">options-total.js file</a></b>
+  <b><a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/advanced-options/options-timeout.js">options-timeout.js file</a></b>
+  <b><a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/advanced-options/options-on-start.js">options-on-start.js file</a></b>
+  <b><a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/advanced-options/options-on-error.js">options-on-error.js file</a></b>
+</p>
 
 ### Given you have code:
 
