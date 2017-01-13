@@ -1,22 +1,30 @@
 import request from 'request-promise';
 import retry from 'retryer';
 
-// STEP 1: create function that returns promise
 function sendRequest() {
-   return request('http://site.com/')
+   return request('http://site-123.com/')
 }
 
-// STEP 2: Pass that function to the retry(FUNCTION_NAME)
-// Notice that we pass `sendRequest` without brackets `sendRequest()`
-// ✅ (Correct) retry(sendRequest)
-// ❌ (Wrong)   retry(sendRequest())
-retry(sendRequest)
-  .then(data => console.log('Connected 🎉'))
-  .catch(error => console.log('error'))
+function onStart(attempt) {
+  console.log(`🌍 🚀 🌑 Flying to the moon #${attempt} time`);
+}
 
+function onError(err, attempt) {
+  if (attempt >= 3) {
+    return console.log(`📛 📛 📛 Oh, crap! Retrying the last time 🚦`);
+  }
 
-// BTW
-// Here is how your code looks like without `retryer`
-// request('http://site.com/')
-//   .then(data => console.log('Connected 🎉'))
-//   .catch(error => console.log('error'))
+  console.log(`📛 📛 📛 Oh, crap! Something went wrong. Restarting engine in 2sec 🚦`);
+}
+
+const options = {
+  debug: false,
+  timeout: 2500,
+  total: 3,
+  onStart,
+  onError
+};
+
+retry(sendRequest, options)
+  .then(data => console.log('🛰 Gliding the space'))
+  .catch(error => console.log('🚧 Sorry mate, the rocket is broken. You cannot fly to the moon ATM'))
