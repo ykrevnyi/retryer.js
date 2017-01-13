@@ -1,8 +1,9 @@
-# retryer.js
 
 <p align="center">
-  <strong>retryer.js examples</strong>
+  <h1>retryer.js examples</h1>
 </p>
+
+---
 
 <p align="center">
   <b>basic</b> &bull;
