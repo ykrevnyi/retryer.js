@@ -99,7 +99,9 @@ request('http://site.com/')
   .catch(..)
 
 // after
-// Notice that we pass `sendRequest` and NOT `sendRequest()`
+// Notice that we pass `sendRequest` without brackets `sendRequest()`
+// ✅ (Correct) retry(sendRequest)
+// ❌ (Wrong)   retry(sendRequest())
 retry(sendRequest)
   .then(..)
   .catch(..)
