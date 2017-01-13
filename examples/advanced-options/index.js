@@ -2,7 +2,8 @@ import request from 'request-promise';
 import retry from 'retryer';
 
 function sendRequest() {
-   return request('http://site-123.com/')
+   return request('http://non-existing-resource.com/');
+  //  return request('http://google.com/');
 }
 
 const options = {
