@@ -1,7 +1,5 @@
 
-<p align="center">
-  <h1>retryer.js examples</h1>
-</p>
+<h1 align="center">retryer.js examples</h1>
 
 ---
 
