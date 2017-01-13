@@ -14,6 +14,6 @@ retry(sendRequest)
 
 // BTW
 // Here is how your code looks like without `retryer`
-request('http://site.com/')
-  .then(data => console.log('Connected 🎉'))
-  .catch(error => console.log('error'))
+// request('http://site.com/')
+//   .then(data => console.log('Connected 🎉'))
+//   .catch(error => console.log('error'))
