@@ -26,7 +26,7 @@
     "test0": "babel-tape-runner test/**/*.spec.js",
     "build": "babel src -d dist",
     "send-request": "babel-node send-request.js",
-    "docs": "pug docs/templates --extension md"
+    "docs": "pug docs/templates --extension md --pretty"
   },
   "repository": {
     "type": "git",
