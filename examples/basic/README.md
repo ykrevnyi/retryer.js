@@ -38,6 +38,8 @@ retry(myPromise)
   .catch(error => console.log('error'))
 ```
 
+<h5 align="center">Full example is in <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/basic/index.js">index.js file</a></h5>
+
 ## Test it yourself
 Here at Jsbin
 
