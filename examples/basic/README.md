@@ -45,9 +45,6 @@ retry(myPromise)
 
 ## Prefer diff?
 ```diff
-import request from 'request-promise';
-import retry from 'retryer';
-
 +function sendRequest() {
 +   return request('http://site.com/')
 +}
