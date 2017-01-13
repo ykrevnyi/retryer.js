@@ -1,0 +1,18 @@
+{
+  "name": "retryer-example-basic",
+  "version": "1.0.0",
+  "description": "<h1 align=\"center\">retryer.js examples</h1>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "babel-node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "retryer": "^1.0.0",
+    "babel-cli": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-es2017": "^6.16.0"
+  }
+}
