@@ -56,8 +56,6 @@ retry(sendRequest)
 ```
 
 ## Test it yourself
-Here at Jsbin
-
 Clone GitHub repository.
 ```bash
 git clone https://github.com/ykrevnyi/retryer.js
