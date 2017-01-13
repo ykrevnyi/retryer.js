@@ -82,6 +82,8 @@ npm start
 In order to retry request - just wrap your `promise`(in our case its `request('http://site.com/')`) into function:
 
 ```javascript
+// *** STEP 1 ***
+//
 // before
 request('http://site.com/');
 
@@ -93,6 +95,8 @@ function sendRequest() {
 
 And then call it:
 ```javascript
+// *** STEP 2 ***
+//
 // before
 request('http://site.com/')
   .then(..)
