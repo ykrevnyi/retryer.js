@@ -21,15 +21,14 @@
 In the `advanced-options` examples we will configure all available options for `retryer`.
 
 ## Available Options
-|-|-|-|
-|a|b|c|
-```
-debug     : Boolean,    // (Optional) Log debug information
-total     : Number,     // (Optional) Number of attempts
-timeout   : Number      // (Optional) Backoff timeout (in ms)
-_onStart  : Function    // (Optional) This function will be triggered on start of each attempt
-_onError  : Function    // (Optional) This function will be triggered on error of each attempt
-```
+**Option Name**|**Type**|**Default**|**Description**
+:-------------:|:------:|:---------:|:------------:|
+`debug`|`Boolean`|`false`|Log debug information
+`total`|`Number`|`10`|Number of attempts to retry
+`timeout`|`Number`|`1000`|Backoff timeout (in ms)
+`_onStart`|`Function`|`function(attempt) {..}`|Is triggered on start for each attempt
+`_onError`|`Function`|`function(error, attempt) {..}`|Is triggered on error for each attempt
+
 
 ### Given you have code:
 
