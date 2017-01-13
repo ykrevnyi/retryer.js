@@ -37,14 +37,15 @@ Pass an `options` object as a `second` argument.
 // Syntax
 retry(fn, OPTIONS);
 
-// Example: retry promise 5 times with 1.5s timeout
+// Example: retry request 5 times with 1.5s timeout
 // const options = {
 //   timeout: 1500,
 //   total: 5
 // };
 //
-// retry(fn, options);
+// retry(sendRequest, options);
 ```
+<h5 align="center">Full example is in <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/advanced-options/index.js">index.js file</a></h5>
 
 ## Need Help?
 Please submit an issue on GitHub and provide information about your setup.
