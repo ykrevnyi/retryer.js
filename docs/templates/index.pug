@@ -1,0 +1,23 @@
+:markdown-it(linkify langPrefix='highlight-')
+  # retryer.js
+
+  `retryer` is a tiny library that enables you to retry requests.
+
+p(align=center)
+  img(
+    src='https://github.com/ykrevnyi/reconnect/blob/docs/docs/retryer-v1.5.1.gif'
+    alt='intro'
+  )
+
+:markdown-it(linkify langPrefix='highlight-')
+  ```javascript
+  // STEP 1: create function that returns promise
+  function sendRequest() {
+     return request('http://site.com/')
+  }
+
+  // STEP 2: Pass that function to the retry(FUNCTION_NAME)
+  retry(sendRequest)
+    .then(data => console.log('Connected 🎉'))
+    .catch(error => console.log('error'))
+  ```
