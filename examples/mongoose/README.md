@@ -40,7 +40,7 @@ function mongooseConnect() {
 // STEP 3: Pass that function to the retry(FUNCTION_NAME)
 retry(mongooseConnect)
   .then(data => console.log('Connected 🎉'))
-  .catch(err => console.log('error'););
+  .catch(err => console.log('error'));
 ```
 <h5 align="center">Full example is in <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/basic/index.js">index.js file</a></h5>
 
