@@ -60,7 +60,7 @@ If your app has `10 attempts` => then `onStart` will be called `10 times`.
 ```javascript
 const options = {
   onStart: attempt => {
-    console.log(`🌍 🚀 🌑 Flying to the moon #${attempt} time`);
+    console.log(`Starting #${attempt} attempt`);
   }
 };
 
