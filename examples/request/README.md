@@ -2,9 +2,8 @@
 <h1 align="center">retryer.js examples</h1>
 
 <p align="center">
-  <b>basic</b> &bull;
-  <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/hello-world/">hello-world</a> &bull;
-  <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/request/">request</a> &bull;
+  <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/basic/">basic</a> &bull;
+  <b>request</b> &bull;
   <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/mongoose/">mongoose</a> &bull;
   <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/mongodb/">mongodb</a> &bull;
   <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/redis/">redis</a> &bull;
@@ -18,7 +17,7 @@
   <img src="https://github.com/ykrevnyi/reconnect/blob/docs/docs/retryer-v1.5.1.gif" alt="retryer.js intro"/>
 </p>
 
-In this `basic` example we will take a look at the most simple request retry.
+In this `request` example we will use retry http requests.
 
 ## Quick Start
 
@@ -64,7 +63,7 @@ git clone https://github.com/ykrevnyi/retryer.js
 
 Open `basic` example.
 ```bash
-cd retryer.js/examples/basic
+cd retryer.js/examples/request
 ```
 
 Install dependencies.
@@ -75,51 +74,6 @@ npm install
 Start `basic` example.
 ```bash
 npm start
-```
-
-## A bit of explanation
-In order to retry request - just wrap your `promise`(in our case its `request('http://site.com/')`) into function:
-
-```javascript
-/* STEP 1 */
-
-// before
-request('http://site.com/');
-
-// after
-function sendRequest() {
-  return request('http://site.com/');
-}
-```
-
-And then call it:
-```javascript
-/* STEP 2 */
-
-// before
-request('http://site.com/')
-  .then(..)
-  .catch(..)
-
-// after
-// Notice that we pass `sendRequest` without brackets `sendRequest()`
-// ✅ (Correct) retry(sendRequest)
-// ❌ (Wrong)   retry(sendRequest())
-retry(sendRequest)
-  .then(..)
-  .catch(..)
-```
-
-Want to see `diff`?
-```diff
-+function sendRequest() {
-+  return request('http://site.com/');
-+}
-
--request('http://site.com/')
-+retry(sendRequest)
-  .then(..)
-  .catch(..)
 ```
 
 ## Need Help?
