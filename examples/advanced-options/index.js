@@ -13,8 +13,6 @@ const options = {
 // STEP 1: create function that returns promise
 function sendRequest() {
   return request('http://google.com/');
-  // OR
-  // return request('http://non-existing-resource.com/');
 }
 
 // STEP 2: Pass that function to the retry(FUNCTION_NAME, OPTIONS)
