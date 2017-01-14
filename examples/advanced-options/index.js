@@ -17,10 +17,10 @@ function sendRequest() {
   // return request('http://non-existing-resource.com/');
 }
 
-// STEP 2: Pass that function to the retry(FUNCTION_NAME)
+// STEP 2: Pass that function to the retry(FUNCTION_NAME, OPTIONS)
 // Notice that we pass `sendRequest` without brackets `sendRequest()`
-// ✅ (Correct) retry(sendRequest)
-// ❌ (Wrong)   retry(sendRequest())
+// ✅ (Correct) retry(sendRequest, options)
+// ❌ (Wrong)   retry(sendRequest(), options)
 retry(sendRequest, options)
   .then(data => console.log('🛰 Gliding the space'))
   .catch(error => console.log('🚧 Sorry mate, the rocket is broken. You cannot fly to the moon ATM'))
