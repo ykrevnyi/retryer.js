@@ -49,27 +49,34 @@ Take a look at our many examples:
 - [`advanced-options`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/advanced-options): Advanced option configuration
 
 ## Available Options
+**Option Name**|**Type**|**Default**|**Description**|**Example**
+:-------------:|:------:|:---------:|:-------------:|:--------:|
+`debug`|`Boolean`|`false`|Log debug information|<a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/advanced-options/options-debug.js">options-debug.js</a>
+`total`|`Number`|`10`|Number of attempts to retry|<a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/advanced-options/options-total.js">options-total.js</a>
+`timeout`|`Number`|`1000`|Backoff timeout (in ms)|<a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/advanced-options/options-timeout.js">options-timeout.js</a>
+`_onStart`|`Function`|`function(attempt) {..}`|Is triggered on start for each attempt|<a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/advanced-options/options-on-start.js">options-on-start.js</a>
+`_onError`|`Function`|`function(error, attempt) {..}`|Is triggered on error for each attempt|<a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/advanced-options/options-on-error.js">options-on-error.js</a>
+
+## How to Pass Options
+
+Pass an `options` object as a `second` argument.
 
 ```javascript
-const options = {
-  debug     : Boolean,    // (Optional) Log debug information
-  total     : Number,     // (Optional) Number of attempts
-  timeout   : Number      // (Optional) Backoff timeout (in ms)
-  _onStart  : Function    // (Optional) This function will be triggered on start of each attempt
-  _onError  : Function    // (Optional) This function will be triggered on error of each attempt
-};
+// Syntax
+retry(fn, OPTIONS);
 
-// Example:
+// Example: retry request 3 times with 2.5s timeout
 // const options = {
-//   debug: true,
-//   total: 5,
-//   timeout: 1500,
-//   _onStart: attempt => {},
-//   _onError: (err, attempt) => {}
+//   debug: false,
+//   timeout: 2500,
+//   total: 3,
+//   function(attempt) {..},
+//   function(err, attempt) {..}
 // };
-
-retry(promise, options);
+//
+// retry(sendRequest, options);
 ```
+<h5 align="center">Full example is in <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/advanced-options/index.js">index.js file</a></h5>
 
 ## Need Help?
 Please submit an issue on GitHub and provide information about your setup.
