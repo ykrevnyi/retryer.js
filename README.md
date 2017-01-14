@@ -49,7 +49,7 @@ Take a look at our many examples:
 - [`advanced-options`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/advanced-options): Advanced option configuration
 
 ## Fully customisable
-Change everything to fit your needs.
+Change `anything` you need to `fit` your needs.
 
 <p align="center">
   <img src="https://github.com/ykrevnyi/reconnect/blob/docs/docs/retryer-options-v1.0.1.gif" alt="retryer.js options"/>
