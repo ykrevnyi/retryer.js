@@ -17,7 +17,7 @@
   <img src="https://github.com/ykrevnyi/reconnect/blob/docs/docs/retryer-v1.5.1.gif" alt="retryer.js intro"/>
 </p>
 
-In this `request` example we will use retry http requests.
+In this `request` example we will retry http requests.
 
 ## Quick Start
 
