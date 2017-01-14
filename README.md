@@ -76,7 +76,7 @@ retry(fn, OPTIONS);
 //
 // retry(sendRequest, options);
 ```
-<h5 align="center">Full <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/advanced-options/index.js">example is here</a></h5>
+<h5 align="center">Full <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/advanced-options/">example is here</a></h5>
 
 ## Need Help?
 Please submit an issue on GitHub and provide information about your setup.
