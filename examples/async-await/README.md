@@ -78,50 +78,5 @@ Start `basic` example.
 npm start
 ```
 
-## A bit of explanation
-In order to retry request - just wrap your `promise`(in our case its `request('http://site.com/')`) into function:
-
-```javascript
-/* STEP 1 */
-
-// before
-request('http://site.com/');
-
-// after
-function sendRequest() {
-  return request('http://site.com/');
-}
-```
-
-And then call it:
-```javascript
-/* STEP 2 */
-
-// before
-request('http://site.com/')
-  .then(..)
-  .catch(..)
-
-// after
-// Notice that we pass `sendRequest` without brackets `sendRequest()`
-// ✅ (Correct) retry(sendRequest)
-// ❌ (Wrong)   retry(sendRequest())
-retry(sendRequest)
-  .then(..)
-  .catch(..)
-```
-
-Want to see `diff`?
-```diff
-+function sendRequest() {
-+  return request('http://site.com/');
-+}
-
--request('http://site.com/')
-+retry(sendRequest)
-  .then(..)
-  .catch(..)
-```
-
 ## Need Help?
 Please submit an issue on GitHub and provide information about your setup.
