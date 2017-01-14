@@ -54,7 +54,7 @@ Change `anything` you need to `fit` your needs.
 <p align="center">
   <img src="https://github.com/ykrevnyi/reconnect/blob/docs/docs/retryer-options-v1.0.1.gif" alt="retryer.js options"/>
 </p>
-<h5 align="center">How to <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/basic">customise it?</a></h5>
+<h5 align="center">How to <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/advanced-options">customise it?</a></h5>
 
 
 ## Available Options
