@@ -53,8 +53,9 @@ retry(mongooseConnect)
 ```diff
 +mongoose.Promise = Promise;
 
+-mongoose.connect('mongodb://mongodb/test-db');
 +function mongooseConnect() {
-  return mongoose.connect('mongodb://mongodb/test-db');
++  return mongoose.connect('mongodb://mongodb/test-db');
 +}
 -mongoose.connection.on('error', console.log('error'));
 -mongoose.connection.once('open', function() {
