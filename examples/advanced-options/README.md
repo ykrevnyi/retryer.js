@@ -25,8 +25,12 @@ In the `advanced-options` examples we will configure all available options for `
 ### Given you have code:
 
 ```javascript
-// Send request to the http://site.com/
-request('http://site.com/')
+function sendRequest() {
+  // Send request to the http://site.com/
+  return request('http://site.com/')
+}
+
+retry(sendRequest, options})
   .then(data => console.log('Connected 🎉'))
   .catch(error => console.log('error'))
 ```
@@ -70,15 +74,15 @@ retry(sendRequest, options})
 +  }
 +}
 
-+function sendRequest() {
-+  // Send request to the http://site.com/
-+  return request('http://site.com/')
-+}
+function sendRequest() {
+  // Send request to the http://site.com/
+  return request('http://site.com/')
+}
 
--request('http://site.com/')
-+retry(sendRequest, options})
-+  .then(data => console.log('Connected 🎉'))
-+  .catch(error => console.log('error'))
+-retry(sendRequest)
++retry(sendRequest, options)
+  .then(data => console.log('Connected 🎉'))
+  .catch(error => console.log('error'))
 ```
 
 
