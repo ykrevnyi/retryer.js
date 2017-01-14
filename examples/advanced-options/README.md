@@ -29,9 +29,9 @@ In the `advanced-options` examples we will configure all available options for `
 `_onStart`|`Function`|`function(attempt) {..}`|Is triggered on start for each attempt|<a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/advanced-options/options-on-start.js">options-on-start.js</a>
 `_onError`|`Function`|`function(error, attempt) {..}`|Is triggered on error for each attempt|<a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/advanced-options/options-on-error.js">options-on-error.js</a>
 
-## How to Pass Options
+### How to Pass Options
 
-Pass an `options` object as a `second` argument.
+Pass an `options` as a `second` argument.
 
 ```javascript
 // Syntax

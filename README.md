@@ -59,7 +59,7 @@ Take a look at our many examples:
 
 ### How to Pass Options?
 
-Pass an `options` object as a `second` argument.
+Pass an `options` as a `second` argument.
 
 ```javascript
 // Syntax
