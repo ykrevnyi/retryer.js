@@ -35,7 +35,7 @@ Or just [download a ZIP file.](https://github.com/ykrevnyi/reconnect/archive/mas
 
 ## Examples
 
-Take a look at our many examples:
+`Copy & Paste` retryer into your code:
 
 - [`basic`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/basic): The easiest way to get started
 - [`hello-world`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/hello-world.js): Shows the differences with and without using retryer
