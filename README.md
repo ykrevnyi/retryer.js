@@ -48,6 +48,15 @@ Take a look at our many examples:
 - [`angular`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/rabbitmq.js): ..
 - [`advanced-options`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/advanced-options): Advanced option configuration
 
+## Fully customisable
+Change everything to fit your needs.
+
+<p align="center">
+  <img src="https://github.com/ykrevnyi/reconnect/blob/docs/docs/retryer-options-v1.0.1.gif" alt="retryer.js options"/>
+</p>
+<h5 align="center">How to <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/basic">customise it?</a></h5>
+
+
 ## Available Options
 **Option Name**|**Type**|**Default**|**Description**|**Example**
 :-------------:|:------:|:---------:|:-------------:|:--------:|

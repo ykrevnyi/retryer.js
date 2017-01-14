@@ -50,5 +50,11 @@ retry(fn, OPTIONS);
 ```
 <h5 align="center">Checkout full <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/advanced-options/index.js">example</a>.</h5>
 
+## Custom log messages
+Set `onStart` and `onError` in order to customize log messages.
+
+```javascript
+```
+
 ## Need Help?
 Please submit an issue on GitHub and provide information about your setup.
