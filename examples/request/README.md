@@ -24,6 +24,7 @@ In this `request` example we will use retry http requests.
 ### Given you have code:
 
 ```javascript
+// Consider using `request-promise` instead of `request`
 // Send request to the http://site.com/
 request('http://site.com/')
   .then(data => console.log('Connected 🎉'))
@@ -41,7 +42,7 @@ retry(sendRequest)
   .then(data => console.log('Connected 🎉'))
   .catch(error => console.log('error'))
 ```
-<h5 align="center">Full example is in <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/basic/index.js">index.js file</a></h5>
+<h5 align="center">Full examples are: <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/request/request.js">request</a> and <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/request/request-promise.js">request-promise</a>.</h5>
 
 ## Prefer diff?
 ```diff
