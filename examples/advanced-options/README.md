@@ -20,6 +20,42 @@
 
 In the `advanced-options` examples we will configure all available options for `retryer`.
 
+## Quick Start
+
+### Given you have code:
+
+```javascript
+// Send request to the http://site.com/
+request('http://site.com/')
+  .then(data => console.log('Connected 🎉'))
+  .catch(error => console.log('error'))
+```
+
+### With custom options it looks like
+```javascript
+const options = {
+  debug: true, // show debug information
+  total: 5, // retry 5 times
+  timeout: 2000, // wait 2sec between retries
+  onStart: attempt => {
+    console.log(`Starting #${attempt} attempt`);
+  },
+  onError: (err, attempt) => {
+    console.log(`Attempt #${attempt} failed. Error ${err}`);
+  }
+}
+function sendRequest() {
+  // Send request to the http://site.com/
+  return request('http://site.com/')
+}
+
+retry(sendRequest, options})
+  .then(data => console.log('Connected 🎉'))
+  .catch(error => console.log('error'))
+```
+<h5 align="center">Full example is in <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/basic/index.js">index.js file</a></h5>
+
+
 ## Available Options
 **Option Name**|**Type**|**Default**|**Description**|**Example**
 :-------------:|:------:|:---------:|:-------------:|:--------:|
