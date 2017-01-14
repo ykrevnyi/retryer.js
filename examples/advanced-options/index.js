@@ -1,12 +1,7 @@
 import request from 'request-promise';
 import retry from 'retryer';
 
-function sendRequest() {
-  //  return request('http://non-existing-resource.com/');
-  // OR
-  return request('http://google.com/');
-}
-
+// Define options
 const options = {
   debug: false,
   timeout: 2500,
@@ -15,12 +10,24 @@ const options = {
   onError
 };
 
+// STEP 1: create function that returns promise
+function sendRequest() {
+  return request('http://google.com/');
+  // OR
+  // return request('http://non-existing-resource.com/');
+}
+
+// STEP 2: Pass that function to the retry(FUNCTION_NAME)
+// Notice that we pass `sendRequest` without brackets `sendRequest()`
+// ✅ (Correct) retry(sendRequest)
+// ❌ (Wrong)   retry(sendRequest())
 retry(sendRequest, options)
   .then(data => console.log('🛰 Gliding the space'))
   .catch(error => console.log('🚧 Sorry mate, the rocket is broken. You cannot fly to the moon ATM'))
 
 
-// Helper functions
+
+// Some helper functions
 function onStart(attempt) {
   console.log(`🌍 🚀 🌑 Flying to the moon #${attempt} time`);
 }
