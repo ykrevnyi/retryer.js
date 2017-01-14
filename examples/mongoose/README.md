@@ -25,6 +25,11 @@ In this `mongoose` example we will reconnect to the `mongodb` using `mongoose` l
 
 ```javascript
 mongoose.connect('mongodb://localhost/test');
+mongoose.connection.on('error', console.log('error'));
+mongoose.connection.once('open', function() {
+  console.log('Connected 🎉');
+});
+
 ```
 
 ### With `retryer` it looks like
@@ -42,7 +47,7 @@ retry(mongooseConnect)
   .then(data => console.log('Connected 🎉'))
   .catch(err => console.log('error'));
 ```
-<h5 align="center">Full example is in <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/basic/index.js">index.js file</a></h5>
+<h5 align="center">Full <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/mongoose/index.js">example here</a></h5>
 
 ## Prefer diff?
 ```diff
@@ -51,6 +56,10 @@ retry(mongooseConnect)
 +function mongooseConnect() {
   return mongoose.connect('mongodb://mongodb/test-db');
 +}
+-mongoose.connection.on('error', console.log('error'));
+-mongoose.connection.once('open', function() {
+-  console.log('Connected 🎉');
+-});
 
 +retry(mongooseConnect)
 +  .then(data => console.log('Connected 🎉'))

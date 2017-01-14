@@ -1,22 +1,29 @@
-import request from 'request-promise';
+import mongoose from 'mongoose';
+import Promise from 'Bluebird';
 import retry from 'retryer';
 
-// STEP 1: create function that returns promise
-function sendRequest() {
-   return request('http://site.com/')
+// STEP 1: Promisify mongoose
+mongoose.Promise = Promise;
+
+// STEP 2: Create function that returns mongoose' promise
+function mongooseConnect() {
+  return mongoose.connect('mongodb://mongodb/test-db');
 }
 
-// STEP 2: Pass that function to the retry(FUNCTION_NAME)
-// Notice that we pass `sendRequest` without brackets `sendRequest()`
-// ✅ (Correct) retry(sendRequest)
-// ❌ (Wrong)   retry(sendRequest())
-retry(sendRequest)
+// STEP 3: Pass that function to the retry(FUNCTION_NAME)
+// Notice that we pass `mongooseConnect` without brackets `mongooseConnect()`
+// ✅ (Correct) retry(mongooseConnect)
+// ❌ (Wrong)   retry(mongooseConnect())
+retry(mongooseConnect)
   .then(data => console.log('Connected 🎉'))
-  .catch(error => console.log('error'))
+  .catch(err => console.log('error'));
 
 
 // BTW
 // Here is how your code looks like without `retryer`
-// request('http://site.com/')
-//   .then(data => console.log('Connected 🎉'))
-//   .catch(error => console.log('error'))
+// mongoose.connect('mongodb://localhost/test');
+// var db = mongoose.connection;
+// db.on('error', console.log('error'));
+// db.once('open', function() {
+//   console.log('connected!');
+// });
