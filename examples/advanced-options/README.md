@@ -53,7 +53,36 @@ retry(fn, OPTIONS);
 ## Custom log messages
 Set `onStart` and `onError` in order to customize log messages.
 
+### Set `onStart` handler
+This function will be triggered on start for each attempt.
+If your app has `10 attempts` => then `onStart` will be called `10 times`.
+
 ```javascript
+const options = {
+  onStart: attempt => {
+    console.log(`🌍 🚀 🌑 Flying to the moon #${attempt} time`);
+  }
+};
+
+retry(sendRequest, options)
+  .then(..)
+  .catch(..)
+```
+
+### Set `onError` handler
+This function will be triggered on error for each attempt.
+If your app has `10 attempts` and `5 of them failed` => then `onError` will be called `5 times`.
+
+```javascript
+const options = {
+  onError: (err, attempt) => {
+    console.log(`📛 Something went wrong. Error ${err}`);
+  }
+};
+
+retry(sendRequest, options)
+  .then(..)
+  .catch(..)
 ```
 
 ## Need Help?

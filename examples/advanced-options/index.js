@@ -39,5 +39,5 @@ function onError(err, attempt) {
     return console.log(`📛 📛 📛 Oh, crap! Retrying the last time 🚦`);
   }
 
-  console.log(`📛 📛 📛 Oh, crap! Something went wrong. Restarting engine in 2sec 🚦`);
+  console.log(`📛 📛 📛 Something went wrong. Restarting engine in 2sec 🚦`);
 }
