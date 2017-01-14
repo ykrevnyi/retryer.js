@@ -38,7 +38,6 @@ Or just [download a ZIP file.](https://github.com/ykrevnyi/reconnect/archive/mas
 Take a look at our many examples:
 
 - [`basic`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/basic): The easiest way to get started
-- [`hello-world`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/hello-world.js): Shows the differences with and without using retryer
 - [`async/await`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/async-await.js): Using async/await with retryer
 - [`mongoose`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/mongoose.js): Establish connection with mongodb
 - [`mongodb`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/mongodb.js): Connect to mongodb
