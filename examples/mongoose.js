@@ -6,15 +6,11 @@ import retry from '../index';
 mongoose.Promise = Promise;
 
 // STEP 2: Create function that returns mongoose' promise
-function promise() {
+function mongooseConnect() {
   return mongoose.connect('mongodb://mongodb/test-db');
 }
 
 // STEP 3: Pass that function to the retry(FUNCTION_NAME)
-retry(promise, {debug: true})
-  .then(data => {
-    console.log('connected!', data);
-  })
-  .catch(err => {
-    console.log('NOT connected', err);
-  });
+retry(mongooseConnect)
+  .then(data => console.log('Connected 🎉'))
+  .catch(err => console.log('error'););
