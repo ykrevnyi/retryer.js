@@ -17,7 +17,7 @@
   <img src="https://github.com/ykrevnyi/reconnect/blob/docs/docs/retryer-v1.5.1.gif" alt="retryer.js intro"/>
 </p>
 
-In this `basic` example we will take a look at the most simple request retry.
+In this `async-await` example we will take a look at async/await usage.
 
 ## Quick Start
 
