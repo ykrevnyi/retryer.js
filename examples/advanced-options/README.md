@@ -51,10 +51,10 @@ retry(fn, OPTIONS);
 <h5 align="center">Checkout full <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/advanced-options/index.js">example</a>.</h5>
 
 ## Custom log messages
-Set `onStart` and `onError` in order to customize log messages.
 
 ### Set `onStart` handler
 This function will be triggered on start for each attempt.
+
 If your app has `10 attempts` => then `onStart` will be called `10 times`.
 
 ```javascript
@@ -71,6 +71,7 @@ retry(sendRequest, options)
 
 ### Set `onError` handler
 This function will be triggered on error for each attempt.
+
 If your app has `10 attempts` and `5 of them failed` => then `onError` will be called `5 times`.
 
 ```javascript
