@@ -18,7 +18,7 @@ retry(sendRequest)
   .catch(error => console.log('error'))
 ```
 
-<h5 align="center">Checkout <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/basic">full example here.</a></h5>
+<h5 align="center">Checkout <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/basic/index.js">full example</a> or <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/basic">docs</a>.</h5>
 
 ## Install
 You can get it on npm.
