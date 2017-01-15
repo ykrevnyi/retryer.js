@@ -41,12 +41,12 @@ function handler(err, db) {
 const connectPromise = Promise.promisify(MongoClient.connect);
 
 // STEP 2: Create function that returns mongodb' promise
-function mongodbConnect() {
+function connect() {
   return connectPromise('mongodb://mongodb/test-db');
 }
 
 // STEP 3: Pass that function to the retry(FUNCTION_NAME)
-retry(mongodbConnect)
+retry(connect)
   .then(data => console.log(`connected: ${data}`))
   .catch(err => console.log(`not connected: ${err}`))
 ```
@@ -57,7 +57,7 @@ retry(mongodbConnect)
 +const connect = Promise.promisify(MongoClient.connect);
 
 -MongoClient.connect('mongodb://mongodb/test-db', handler);
-+function mongodbConnect() {
++function connect() {
 +  return connect('mongodb://mongodb/test-db');
 +}
 
@@ -69,7 +69,7 @@ retry(mongodbConnect)
 -  console.log('Connected 🎉');
 -}
 
-+retry(mongodbConnect)
++retry(connect)
 +  .then(data => console.log('Connected 🎉'))
 +  .catch(err => console.log('error'))
 ```
