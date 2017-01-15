@@ -68,6 +68,7 @@ retry(mongooseConnect)
 ```
 
 ## Test it yourself
+### Using `Docker`
 Clone GitHub repository.
 ```bash
 git clone https://github.com/ykrevnyi/retryer.js
@@ -86,6 +87,34 @@ docker-compose build mongoose-example
 Start `mongoose` example.
 ```bash
 docker-compose run --rm mongoose-example npm start
+```
+
+### Not Using `Docker`
+Clone GitHub repository.
+```bash
+git clone https://github.com/ykrevnyi/retryer.js
+```
+
+Open `mongoose` example.
+```bash
+cd retryer.js/examples/mongoose
+```
+
+Make sure mongodb is running.
+```bash
+mongod
+# or
+service mongod status
+```
+
+Install dependencies.
+```bash
+npm install
+```
+
+Start `mongoose` example.
+```bash
+npm start
 ```
 
 ## Need Help?
