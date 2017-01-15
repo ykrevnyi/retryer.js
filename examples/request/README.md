@@ -7,10 +7,8 @@
   <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/mongoose/">mongoose</a> &bull;
   <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/mongodb/">mongodb</a> &bull;
   <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/redis/">redis</a> &bull;
-  <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/angular/">angular</a> &bull;
-  <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/react/">react</a> &bull;
   <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/async-await/">async/await</a> &bull;
-  <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/advanced-options/">advanced-options</a>
+  <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/advanced-options/">advanced options</a>
 </p>
 
 <p align="center">
@@ -25,7 +23,6 @@ In this `request` example we will retry http requests.
 
 ```javascript
 // Consider using `request-promise` instead of `request`
-// Send request to the http://site.com/
 request('http://site.com/')
   .then(data => console.log('Connected 🎉'))
   .catch(error => console.log('error'))
@@ -33,11 +30,12 @@ request('http://site.com/')
 
 ### With `retryer` it looks like
 ```javascript
+// STEP 1: create function that returns promise
 function sendRequest() {
-  // Send request to the http://site.com/
   return request('http://site.com/')
 }
 
+// STEP 2: Pass that function to the retry(FUNCTION_NAME)
 retry(sendRequest)
   .then(data => console.log('Connected 🎉'))
   .catch(error => console.log('error'))

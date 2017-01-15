@@ -8,8 +8,6 @@
   <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/mongoose">mongoose</a> &bull;
   <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/mongodb">mongodb</a> &bull;
   <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/redis">redis</a> &bull;
-  <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/angular">angular</a> &bull;
-  <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/react">react</a> &bull;
   <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/async-await">async/await</a> &bull;
   <b>advanced-options</b>
 </p>
@@ -26,7 +24,6 @@ In the `advanced-options` examples we will configure all available options for `
 
 ```javascript
 function sendRequest() {
-  // Send request to the http://site.com/
   return request('http://site.com/')
 }
 
@@ -50,7 +47,6 @@ const options = {
 }
 
 function sendRequest() {
-  // Send request to the http://site.com/
   return request('http://site.com/')
 }
 
@@ -75,7 +71,6 @@ retry(sendRequest, options})
 +}
 
 function sendRequest() {
-  // Send request to the http://site.com/
   return request('http://site.com/')
 }
 

@@ -10,15 +10,17 @@ async function sendRequest() {
 // Notice that we pass `sendRequest` without brackets `sendRequest()`
 // ✅ (Correct) retry(sendRequest)
 // ❌ (Wrong)   retry(sendRequest())
-// retry(sendRequest)
-//   .then(data => console.log('Connected 🎉'))
-//   .catch(error => console.log('error'))
 retry(sendRequest)
   .then(data => console.log('Connected 🎉'))
   .catch(error => console.log('error'))
 
+
 // BTW
 // Here is how your code looks like without `retryer`
-// request('http://site.com/')
+// async function sendRequest() {
+//    await request('http://site.com/')
+// }
+//
+// sendRequest()
 //   .then(data => console.log('Connected 🎉'))
 //   .catch(error => console.log('error'))
