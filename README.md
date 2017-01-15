@@ -1,18 +1,3 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**
-
-- [retryer.js](#retryerjs)
-  - [Install](#install)
-  - [Examples](#examples)
-  - [Fully customisable](#fully-customisable)
-  - [Available Options](#available-options)
-    - [How to Pass Options?](#how-to-pass-options)
-  - [Need Help?](#need-help)
-  - [License](#license)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
 # retryer.js
 
 `retryer` is a tiny library that enables you to retry promises.
