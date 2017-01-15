@@ -1,6 +1,6 @@
 # retryer.js
 
-`retryer` is a tiny library that enables you to retry promises.
+`retryer` is a tiny, battle tested library that enables you to retry promises.
 
 <p align="center">
   <img src="https://github.com/ykrevnyi/reconnect/blob/docs/docs/retryer-v1.5.1.gif" alt="retryer.js intro"/>
