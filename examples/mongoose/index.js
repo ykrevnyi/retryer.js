@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import Promise from 'Bluebird';
+import Promise from 'bluebird';
 import retry from 'retryer';
 
 // STEP 1: Promisify mongoose

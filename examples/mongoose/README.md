@@ -73,7 +73,7 @@ Clone GitHub repository.
 git clone https://github.com/ykrevnyi/retryer.js
 ```
 
-Open `basic` example.
+Open `mongoose` example.
 ```bash
 cd retryer.js/examples/mongoose
 ```
@@ -83,7 +83,7 @@ Install dependencies.
 npm install
 ```
 
-Start `basic` example.
+Start `mongoose` example.
 ```bash
 npm start
 ```
