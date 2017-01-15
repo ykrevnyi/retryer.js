@@ -44,6 +44,7 @@ Take a look at our many examples:
 - [`mongoose`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/mongoose): How to reconnect to Mongoose.
 - [`mongodb`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/mongodb): How to reconnect to MongoDB.
 - [`redis`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/redis): How to reconnect to Redis.
+- `Couldn't find appropriate example?` Create an issue and we will prepare one 💪
 
 ## Fully customisable
 Change `anything` you need to `fit` your needs.
