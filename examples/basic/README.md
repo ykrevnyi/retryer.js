@@ -3,7 +3,6 @@
 
 <p align="center">
   <b>basic</b> &bull;
-  <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/hello-world/">hello-world</a> &bull;
   <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/request/">request</a> &bull;
   <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/mongoose/">mongoose</a> &bull;
   <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/mongodb/">mongodb</a> &bull;
