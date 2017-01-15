@@ -49,21 +49,24 @@ retry(mongodbConnect)
 
 ## Prefer diff?
 ```diff
-+const connectPromise = Promise.promisify(MongoClient.connect);
++const connect = Promise.promisify(MongoClient.connect);
 
--MongoClient.connect('mongodb://mongodb/test-db', (err, db) => {
+-MongoClient.connect('mongodb://mongodb/test-db', handler);
++function mongodbConnect() {
++  return connect('mongodb://mongodb/test-db');
++}
+
+-function handler(err, db) {
 -  if (err) {
 -    return console.log('error');
 -  }
--  console.log("Connected 🎉");
--});
-+function mongodbConnect() {
-+  return mongodb.connect('mongodb://mongodb/test-db');
-+}
+-
+-  console.log('Connected 🎉');
+-}
 
 +retry(mongodbConnect)
 +  .then(data => console.log('Connected 🎉'))
-+  .catch(err => console.log('error'););
++  .catch(err => console.log('error'))
 ```
 
 ## Test it yourself

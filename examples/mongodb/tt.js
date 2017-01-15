@@ -2,12 +2,22 @@ import {MongoClient} from 'mongodb';
 import Promise from 'bluebird';
 import retry from 'retryer';
 
-const url = 'mongodb://mongodb/test-db';
 
-MongoClient.connect(url, (err, db) => {
-  if (err) {
-    return console.log('error');
-  }
++const connect = Promise.promisify(MongoClient.connect);
 
-  console.log("Connected 🎉");
-});
+-MongoClient.connect('mongodb://mongodb/test-db', handler);
++function mongodbConnect() {
++  return connect('mongodb://mongodb/test-db');
++}
+
+-function handler(err, db) {
+-  if (err) {
+-    return console.log('error');
+-  }
+-
+-  console.log("Connected 🎉");
+-}
+
++retry(mongodbConnect)
++  .then(data => console.log(`connected: ${data}`))
++  .catch(err => console.log(`not connected: ${err}`))
