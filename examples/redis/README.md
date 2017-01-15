@@ -24,7 +24,7 @@ In this `redis` example we will reconnect to the `Redis` data store.
 ### Given you have code:
 
 ```javascript
-const client = redis.createClient('redis://redis/test-db');
+const client = redis.createClient('redis://redis/0');
 
 client.on('ready', data => console.log('Connected 🎉'));
 client.on('error', err => console.log('error'));
@@ -34,7 +34,7 @@ client.on('error', err => console.log('error'));
 `Redis` perfectly handles retries by itself.
 
 ```javascript
-const client = redis.createClient('redis://redis/test-db');
+const client = redis.createClient('redis://redis/0');
 
 client.on('ready', data => console.log('Connected 🎉'));
 client.on('error', err => console.log('error'));
