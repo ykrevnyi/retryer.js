@@ -24,10 +24,15 @@ In this `mongodb` example we will reconnect to the `MongoDB`.
 ### Given you have code:
 
 ```javascript
-MongoClient.connect('mongodb://mongodb/test-db', (err, db) => {
-  assert.equal(null, err);
-  console.log("Connected correctly to server");
-});
+MongoClient.connect('mongodb://mongodb/test-db', handler);
+
+function handler(err, db) {
+  if (err) {
+    return console.log('error');
+  }
+
+  console.log('Connected 🎉');
+}
 ```
 
 ### With `retryer` it looks like
