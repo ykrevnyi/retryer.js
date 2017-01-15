@@ -1,5 +1,5 @@
 
-<h1 align="center">retryer.js examples</h1>
+<h1 align="center">How to reconnect to MongoDB.</h1>
 
 <p align="center">
   <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/basic/">basic</a> &bull;

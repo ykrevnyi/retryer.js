@@ -1,3 +1,18 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**
+
+- [retryer.js](#retryerjs)
+  - [Install](#install)
+  - [Examples](#examples)
+  - [Fully customisable](#fully-customisable)
+  - [Available Options](#available-options)
+    - [How to Pass Options?](#how-to-pass-options)
+  - [Need Help?](#need-help)
+  - [License](#license)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # retryer.js
 
 `retryer` is a tiny library that enables you to retry promises.
@@ -37,12 +52,13 @@ Or just [download a ZIP file.](https://github.com/ykrevnyi/reconnect/archive/mas
 
 Take a look at our many examples:
 
-- [`basic`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/basic): The easiest way to get started
-- [`advanced-options`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/advanced-options): Advanced option configuration
-- [`async/await`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/async-await): Using async/await with retryer
-- [`mongoose`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/mongoose): Establish connection with mongodb
-- [`mongodb`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/mongodb): Connect to mongodb
-- [`redis`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/redis): Connect to redis
+- [`basic`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/basic): How to retry promise.
+- [`request`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/request): How to retry HTTP request.
+- [`advanced-options`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/advanced-options): How to use options and customise log messages.
+- [`async/await`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/async-await): How to use async/await.
+- [`mongoose`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/mongoose): How to reconnect to Mongoose.
+- [`mongodb`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/mongodb): How to reconnect to MongoDB.
+- [`redis`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/redis): How to reconnect to Redis.
 - [`rabbitmq`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/rabbitmq): `coming soon..`
 
 ## Fully customisable

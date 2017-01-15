@@ -1,5 +1,5 @@
 
-<h1 align="center">retryer.js examples</h1>
+<h1 align="center">How to retry promise</h1>
 
 <p align="center">
   <b>basic</b> &bull;
