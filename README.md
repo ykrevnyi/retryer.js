@@ -48,7 +48,7 @@ bower install retryer --save
 
 Or just [download a ZIP file.](https://github.com/ykrevnyi/reconnect/archive/master.zip)
 
-## Examples
+## Examples & HOWTO
 
 Take a look at our many examples:
 
