@@ -38,14 +38,12 @@ Or just [download a ZIP file.](https://github.com/ykrevnyi/reconnect/archive/mas
 Take a look at our many examples:
 
 - [`basic`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/basic): The easiest way to get started
-- [`async/await`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/async-await.js): Using async/await with retryer
-- [`mongoose`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/mongoose.js): Establish connection with mongodb
-- [`mongodb`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/mongodb.js): Connect to mongodb
-- [`redis`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/redis.js): ..
-- [`rabbitmq`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/rabbitmq.js): ..
-- [`react`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/rabbitmq.js): ..
-- [`angular`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/rabbitmq.js): ..
 - [`advanced-options`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/advanced-options): Advanced option configuration
+- [`async/await`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/async-await): Using async/await with retryer
+- [`mongoose`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/mongoose): Establish connection with mongodb
+- [`mongodb`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/mongodb): Connect to mongodb
+- [`redis`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/redis): Connect to redis
+- [`rabbitmq`](https://github.com/ykrevnyi/reconnect/blob/docs/examples/rabbitmq): `coming soon..`
 
 ## Fully customisable
 Change `anything` you need to `fit` your needs.
