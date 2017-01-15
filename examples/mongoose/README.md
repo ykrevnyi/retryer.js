@@ -78,14 +78,14 @@ Open `mongoose` example.
 cd retryer.js/examples/mongoose
 ```
 
-Install dependencies.
+Build image.
 ```bash
-npm install
+docker-compose build mongoose-example
 ```
 
 Start `mongoose` example.
 ```bash
-npm start
+docker-compose run --rm mongoose-example npm start
 ```
 
 ## Need Help?
