@@ -38,15 +38,15 @@ function handler(err, db) {
 ### With `retryer` it looks like
 ```javascript
 // STEP 1: Promisify mongodb
-const connectPromise = Promise.promisify(MongoClient.connect);
+const connect = Promise.promisify(MongoClient.connect);
 
 // STEP 2: Create function that returns mongodb' promise
-function connect() {
-  return connectPromise('mongodb://mongodb/test-db');
+function mongodbConnect() {
+  return connect('mongodb://mongodb/test-db');
 }
 
 // STEP 3: Pass that function to the retry(FUNCTION_NAME)
-retry(connect)
+retry(mongodbConnect)
   .then(data => console.log(`connected: ${data}`))
   .catch(err => console.log(`not connected: ${err}`))
 ```
@@ -57,7 +57,7 @@ retry(connect)
 +const connect = Promise.promisify(MongoClient.connect);
 
 -MongoClient.connect('mongodb://mongodb/test-db', handler);
-+function connect() {
++function mongodbConnect() {
 +  return connect('mongodb://mongodb/test-db');
 +}
 
@@ -69,7 +69,7 @@ retry(connect)
 -  console.log('Connected 🎉');
 -}
 
-+retry(connect)
++retry(mongodbConnect)
 +  .then(data => console.log('Connected 🎉'))
 +  .catch(err => console.log('error'))
 ```
