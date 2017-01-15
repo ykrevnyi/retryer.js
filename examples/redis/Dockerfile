@@ -1,6 +1,6 @@
 FROM node:7.1.0
 
-ENV service=mongoose-example
+ENV service=redis-example
 ENV appPath=/home/app
 
 RUN useradd --user-group --create-home --shell /bin/false app

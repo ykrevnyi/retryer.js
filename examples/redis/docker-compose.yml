@@ -1,14 +1,14 @@
 version: '2.0'
 services:
 
-  mongoose-example:
+  redis-example:
     command: npm start
     build: .
     depends_on:
-      - mongodb
+      - redis
     volumes:
-      - ./:/home/app/mongoose-example
-      - /home/app/mongoose-example/node_modules
+      - ./:/home/app/redis-example
+      - /home/app/redis-example/node_modules
 
-  mongodb:
-    image: mongo:3.2.8
+  redis:
+    image: redis:3.0.7

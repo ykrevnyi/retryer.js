@@ -24,48 +24,22 @@ In this `redis` example we will reconnect to the `Redis` data store.
 ### Given you have code:
 
 ```javascript
-redis.connect('mongodb://localhost/test');
-redis.connection.on('error', console.log('error'));
-redis.connection.once('open', function() {
-  console.log('Connected 🎉');
-});
+const client = redis.createClient('redis://redis/test-db');
 
+client.on('ready', data => console.log('Connected 🎉'));
+client.on('error', err => console.log('error'));
 ```
 
-### With `retryer` it looks like
+### With `retryer` it looks 100% same
+`Redis` perfectly handles retries by itself.
+
 ```javascript
-// STEP 1: Promisify redis
-redis.Promise = Promise;
+const client = redis.createClient('redis://redis/test-db');
 
-// STEP 2: Create function that returns redis' promise
-function redisConnect() {
-  return redis.connect('mongodb://mongodb/test-db');
-}
-
-// STEP 3: Pass that function to the retry(FUNCTION_NAME)
-retry(redisConnect)
-  .then(data => console.log('Connected 🎉'))
-  .catch(err => console.log('error'));
+client.on('ready', data => console.log('Connected 🎉'));
+client.on('error', err => console.log('error'));
 ```
 <h5 align="center">Full <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/redis/index.js">example here</a></h5>
-
-## Prefer diff?
-```diff
-+redis.Promise = Promise;
-
--redis.connect('mongodb://mongodb/test-db');
-+function redisConnect() {
-+  return redis.connect('mongodb://mongodb/test-db');
-+}
--redis.connection.on('error', console.log('error'));
--redis.connection.once('open', function() {
--  console.log('Connected 🎉');
--});
-
-+retry(redisConnect)
-+  .then(data => console.log('Connected 🎉'))
-+  .catch(err => console.log('error'););
-```
 
 ## Test it yourself
 ### Using `Docker`
@@ -100,11 +74,10 @@ Open `redis` example.
 cd retryer.js/examples/redis
 ```
 
-Make sure mongodb is running.
+Make sure redis is running.
 ```bash
-mongod
-# or
-service mongod status
+redis-cli ping
+# -> PONG
 ```
 
 Install dependencies.
