@@ -1,0 +1,14 @@
+version: '2.0'
+services:
+
+  redis-example:
+    command: npm start
+    build: .
+    depends_on:
+      - redis
+    volumes:
+      - ./:/home/app/redis-example
+      - /home/app/redis-example/node_modules
+
+  redis:
+    image: redis:3.0.7

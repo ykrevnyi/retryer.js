@@ -1,0 +1,14 @@
+version: '2.0'
+services:
+
+  mongoose-example:
+    command: npm start
+    build: .
+    depends_on:
+      - mongodb
+    volumes:
+      - ./:/home/app/mongoose-example
+      - /home/app/mongoose-example/node_modules
+
+  mongodb:
+    image: mongo:3.2.8

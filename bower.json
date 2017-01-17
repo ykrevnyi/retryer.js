@@ -1,0 +1,17 @@
+{
+  "name": "retryer",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "yuriikrevnyi <yuriikrevnyi@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/ykrevnyi/reconnect",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

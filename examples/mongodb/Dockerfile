@@ -1,6 +1,6 @@
 FROM node:7.1.0
 
-ENV service=retryer
+ENV service=mongodb-example
 ENV appPath=/home/app
 
 RUN useradd --user-group --create-home --shell /bin/false app
