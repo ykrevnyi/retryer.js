@@ -1,7 +1,8 @@
-
+language: none
 
 build:
-  pre_ci:
+  ci:
+    - echo 'CI Running'
     - pwd
     - ls -la
     - docker build -t test-build:test-tag container_images/Dockerfile-nodejs-v7.1.0
