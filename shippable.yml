@@ -6,7 +6,7 @@ build:
     - pwd
     - ls -la
     - docker build -t test-build:test-tag -f container_images/Dockerfile-nodejs-v7.1.0 container_images/
-    - docker push test-build:test-tag
+    - docker push ykrevnyi/test-build:test-tag
 
 integrations:
   hub:
