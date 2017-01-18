@@ -1,0 +1,9 @@
+
+jobs:
+  - name: demo-job
+    type: runSh
+    steps:
+      - IN: retryerjs-git-repository
+      - TASK:
+        - script: pwd
+        - script: ls -la
