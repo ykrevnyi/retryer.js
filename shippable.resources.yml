@@ -1,0 +1,16 @@
+
+resources:
+  - name: retryerjs-base-image
+    type: image
+    integration: personal_dockerhub
+    pointer:
+      sourceName: ykrevnyi/retryerjs-base
+    seed:
+      versionName: '1.0.0'
+
+  - name: retryerjs-git-repository
+    type: gitRepo
+    integration: github
+    pointer:
+      sourceName: ykrevnyi/retryer.js
+      branch: feat/ci

@@ -2,9 +2,7 @@ language: none
 
 build:
   ci:
-    - echo 'CI Running'
-    - pwd
-    - ls -la
+    - echo 'Building base image for retryer.js'
     - docker build -t retryerjs-base -f container_images/Dockerfile-nodejs-v7.1.0 container_images/
     - docker tag retryerjs-base ykrevnyi/retryerjs-base:latest
     - docker push ykrevnyi/retryerjs-base:latest
