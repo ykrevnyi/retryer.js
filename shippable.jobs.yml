@@ -6,4 +6,3 @@ jobs:
       - IN: retryerjs-git-repository
       - TASK:
         - script: pwd
-        - script: ls -la
