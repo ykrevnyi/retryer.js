@@ -4,6 +4,7 @@ build:
   ci:
     - echo 'Building base image for retryer.js'
     - export DOCKER_IMAGE_NAME=ykrevnyi/retryerjs-base
+    - ls -la
     - ./ci/build.sh
 
   post_ci:

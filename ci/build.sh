@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 
 sudo docker build \
   -t $DOCKER_IMAGE_NAME:$BRANCH.$BUILD_NUMBER \
