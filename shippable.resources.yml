@@ -14,3 +14,8 @@ resources:
     pointer:
       sourceName: ykrevnyi/retryer.js
       branch: feat/ci
+
+  - name: retryer-version
+    type: version
+    seed:
+      versionName: "0.1.0"

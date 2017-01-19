@@ -1,8 +1,21 @@
 
 jobs:
-  - name: demo-job
-    type: runSh
+
+  - name: manifest
+    type: manifest
     steps:
-      - IN: retryerjs-git-repository
-      - TASK:
-        - script: pwd
+      - IN: retryerjs-base-image
+        pull: false
+      - TASK: manged
+    on_success:
+      - script: echo 'green'
+    on_failure:
+      - script: echo 'red'
+
+  - name: release
+    type: release
+    steps:
+      - IN: retryer-version
+      - IN: manifest
+      - TASK: managed
+        bump: minor
