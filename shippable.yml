@@ -3,9 +3,11 @@ language: none
 build:
   ci:
     - echo 'Building base image for retryer.js'
-    - docker build -t retryerjs-base -f container_images/Dockerfile-nodejs-v7.1.0 container_images/
-    - docker tag retryerjs-base ykrevnyi/retryerjs-base:latest
-    - docker push ykrevnyi/retryerjs-base:latest
+    - export DOCKER_IMAGE_NAME=ykrevnyi/retryerjs-base
+    - ./ci/build.sh
+
+  post_ci:
+    - ./ci/push.sh
 
 integrations:
   hub:
