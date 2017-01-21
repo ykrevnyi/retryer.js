@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo docker push $DOCKER_IMAGE_NAME:$BRANCH.$BUILD_NUMBER
+docker push $DOCKER_IMAGE_NAME:$DOCKER_TAG
