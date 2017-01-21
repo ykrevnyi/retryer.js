@@ -1,10 +1,13 @@
 language: none
 
 build:
+
   ci:
-    - echo 'Building base image for retryer.js'
-    - export DOCKER_IMAGE_NAME=ykrevnyi/retryerjs-base
+    - export DOCKER_IMAGE_NAME=ykrevnyi/retryer.js
+    - if [ "$IS_RELEASE" == false ]; then export DOCKER_TAG=trunk-${COMMIT:0:7}; fi
+    - if [ "$IS_RELEASE" == true ]; then export DOCKER_TAG=${GIT_TAG_NAME#v}; fi
     - ./ci/build.sh
+    - ./ci/test.sh
 
   post_ci:
     - ./ci/push.sh
@@ -13,3 +16,8 @@ integrations:
   hub:
     - integrationName: personal_dockerhub
       type: docker
+
+branches:
+  only:
+    - master
+    - v*

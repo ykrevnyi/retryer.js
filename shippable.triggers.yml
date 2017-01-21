@@ -1,7 +1,0 @@
-
-triggers:
-
-  - name: trigger-manifest
-    type: trigger
-    version:
-      counter: 1
