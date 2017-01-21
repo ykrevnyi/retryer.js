@@ -4,6 +4,7 @@ FROM ykrevnyi/retryerjs-base:1.0.1
 # ENV appPath=/home/app
 
 # Install modules
+COPY package.json .
 RUN npm install -q
 
 # Add all the code
