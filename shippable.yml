@@ -18,10 +18,8 @@ integrations:
     - integrationName: trigger.retryerjs.pipelines
       type: webhook
       payload:
-        - versionName=$DOCKER_IMAGE_NAME:$DOCKER_TAG
-      branches:
-        only:
-          - v*
+        - versionName=${GIT_TAG_NAME#v}
+        - isRelease=$IS_RELEASE
       on_success: always
       on_failure: never
 
