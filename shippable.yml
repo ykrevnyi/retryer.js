@@ -9,9 +9,6 @@ build:
     - ./ci/build.sh
     - ./ci/test.sh
 
-  post_ci:
-    - ./ci/push.sh
-
 integrations:
   hub:
     - integrationName: personal_dockerhub
@@ -22,6 +19,10 @@ integrations:
       type: webhook
       payload:
         - versionName=$DOCKER_IMAGE_NAME:$DOCKER_TAG
+      branches:
+        only:
+          - master
+          - v*
       on_success: always
       on_failure: never
 
