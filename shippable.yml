@@ -21,7 +21,7 @@ integrations:
         - versionName=$DOCKER_IMAGE_NAME:$DOCKER_TAG
       branches:
         only:
-          - v*
+          - release/v*
       on_success: always
       on_failure: never
 
