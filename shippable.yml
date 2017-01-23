@@ -20,7 +20,7 @@ integrations:
       payload:
         - versionName=${GIT_TAG_NAME#v}
         - isRelease=$IS_RELEASE
-        - COMMIT_SHA=$COMMIT
+        - commitSha=$COMMIT
       on_success: always
       on_failure: never
 
