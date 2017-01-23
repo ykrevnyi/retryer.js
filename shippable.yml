@@ -2,7 +2,7 @@ language: none
 
 env:
   - secure: lRaHN0eO8x4zlqrsbhJRA9vfpL7EVlYiUYUQUKeGVvME2HP+vlHq8dySCxnjbdq3OpXM3sIFyiv78Wo/lDALiQn1fzPm40yrbEYTNZJ9LKYebUzg2ReCDFvbLu+q38tuNoDqH80y++e/rJTlKUooos0LOPd/zl4xTVs4z32Ol60xjLE46jIksdgjHRpWcxYH3mrSwTBQASx69xufbBxeM3pFoIEJe9WfONX3sbgBBTeALH1L+VDxI8WT5XwqhSTECK/1Ozdq9EJ4sw4Y2MAoBzshaf7Pizoe7ZxfdurhlPlloNUrESVO3E0x8tU8vVnqxaCS5lmeYSuCzXqn2VeYyA==
-  - NPM_EMAIL: ykrevnyi@gmail.com
+  - NPM_EMAIL=ykrevnyi@gmail.com
 
 build:
   ci:
