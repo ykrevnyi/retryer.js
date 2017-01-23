@@ -20,6 +20,7 @@ integrations:
       payload:
         - versionName=${GIT_TAG_NAME#v}
         - isRelease=$IS_RELEASE
+        - dockerImage=$DOCKER_IMAGE_NAME:$DOCKER_TAG
       on_success: always
       on_failure: never
 
