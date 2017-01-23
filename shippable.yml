@@ -13,8 +13,7 @@ build:
     - ./ci/test.sh
 
   post_ci:
-    - echo _auth = $NPM_TOKEN > ~/.npmrc
-    - echo email = $NPM_EMAIL >> ~/.npmrc
+    - echo $NPM_TOKEN > ~/.npmrc
     - ./ci/publish.sh
 
 integrations:
