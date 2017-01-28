@@ -8,6 +8,7 @@ if [ "$IS_RELEASE" = true ]; then
   echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc
   ls -la
   chmod 0600 .npmrc
+  cat .npmrc
   npm --no-git-tag-version version $DOCKER_TAG
   npm publish
 fi
