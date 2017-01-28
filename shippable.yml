@@ -1,8 +1,8 @@
 language: none
 
 env:
-  - secure: KHroXnCDFg7grXzyspYL33EKy7i+K4XHGWyZoqnj2LBstbdZUTJIrez/HjgXaX7g4B2oStnY32qEeTHP6etaib9BC55XDXkrbmTm3aqnO+FANQcJuPz1anR3T4qxQbbiSqslAyTzuK+Azm3WRVIVoYkxpzUm1fQM/CR3ViHUWibk+nwos+Y6HNzT25RYA+Nh1KS/IUsf2j5VZVY+mWC5YA6r0GTvPpwk9kiC3M+ThSmCCzPl9aKqztN/k3FQUYu8UeOo3jnQ6QNbA4Xxa3O7641PufOiXDCUq2eUjcIg8Nn6E+5t3hng5nbL/fuujWVhNhX4Jyze95B2b3KrDTimsw==
-  - NPM_EMAIL=ykrevnyi@gmail.com
+  global:
+    - secure: dQZVRqwghxcxtXs8ZVhwfqWR4KqY19bVDa0OUhO5dyovfoRY7nZnOWcOTwWM+pt+FmxK59PSypJLSsj4LzovZAZSi/vpuk8r4quZ2FB9kpH1RQ4D/AgI5sfuvMlGepVoitx6YtQYFSSFGCS01G/shtKZ3ZwaLrI1PscCYwOm6w8ew+cEPts14zCbaFo7O7NZZHEDnatpnkM2ujdrkRXEzktBRee+0hftiHWtPI3GEm9AGk3es+ldfZ1SdO5QkcOG2lPZ56VBM+kyqjr3wVNQU2TN/DqQR/ZItzWVPTHrLmgopU5xuPjlIHz46UV18N178HAHFF3e62tDeQ5X/V/Isw==
 
 build:
   ci:
@@ -13,7 +13,6 @@ build:
     - ./ci/test.sh
 
   post_ci:
-    - echo $NPM_TOKEN > ~/.npmrc
     - ./ci/publish.sh
 
 integrations:
