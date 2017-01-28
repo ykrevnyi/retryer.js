@@ -2,7 +2,7 @@ language: none
 
 env:
   global:
-    - secure: dQZVRqwghxcxtXs8ZVhwfqWR4KqY19bVDa0OUhO5dyovfoRY7nZnOWcOTwWM+pt+FmxK59PSypJLSsj4LzovZAZSi/vpuk8r4quZ2FB9kpH1RQ4D/AgI5sfuvMlGepVoitx6YtQYFSSFGCS01G/shtKZ3ZwaLrI1PscCYwOm6w8ew+cEPts14zCbaFo7O7NZZHEDnatpnkM2ujdrkRXEzktBRee+0hftiHWtPI3GEm9AGk3es+ldfZ1SdO5QkcOG2lPZ56VBM+kyqjr3wVNQU2TN/DqQR/ZItzWVPTHrLmgopU5xuPjlIHz46UV18N178HAHFF3e62tDeQ5X/V/Isw==
+    - secure: W+NawTMpMcDOx2gcsGXso1Xo0t/iYRPwHekSAJBDionN0XLFvneZh073s3iE/+DXhgwxaZD30yUUqp/bk38n6f+yyrEWNBmnAa22527nn19V9mVtGSZxIOuTplaAfJQkLeOaIfVK5tJG7fJY35LD9PZZI4CE4/bs+MdSeZoDqnufZ0tuYb1Wo8YIIkJWTvwsRxu1HIsCunqiIG+E/fv8GJOK2VUIR2T8MNPAdrYWPPu7qhdizFDNxEmMLyQzBJWuVm1DNrUU+u3YOp6oaMHug78G3wNFiCpj0MkuLSYlx6v503/NUU5A1ulDNjWczAj5QcGfyochx7cILasM8VMXLw==
 
 build:
   ci:
