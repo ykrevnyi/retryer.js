@@ -1,4 +1,7 @@
-language: none
+language: node_js
+
+node_js:
+  - 4.2.3
 
 env:
   global:
