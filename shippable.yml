@@ -1,8 +1,12 @@
-language: none
+language: node_js
+
+node_js:
+  - 4.2.3
 
 env:
-  - secure: KHroXnCDFg7grXzyspYL33EKy7i+K4XHGWyZoqnj2LBstbdZUTJIrez/HjgXaX7g4B2oStnY32qEeTHP6etaib9BC55XDXkrbmTm3aqnO+FANQcJuPz1anR3T4qxQbbiSqslAyTzuK+Azm3WRVIVoYkxpzUm1fQM/CR3ViHUWibk+nwos+Y6HNzT25RYA+Nh1KS/IUsf2j5VZVY+mWC5YA6r0GTvPpwk9kiC3M+ThSmCCzPl9aKqztN/k3FQUYu8UeOo3jnQ6QNbA4Xxa3O7641PufOiXDCUq2eUjcIg8Nn6E+5t3hng5nbL/fuujWVhNhX4Jyze95B2b3KrDTimsw==
-  - NPM_EMAIL=ykrevnyi@gmail.com
+  global:
+    - secure: rkjJxXaABx5tZzF0bYnLGO7/tAJII87Xucd+McrP12Es+ZxZgLbJ4Rb2rfTzeasMH4kzWXKE5xZCq46B4WG6LCVJHhk9NGNxVUEK6Ln6n39VB3p+NUP1cbPrDQBUPJ/Mjuykt7nnfr2us7u2vbhECcBjTFDUCdfYBtMHcAEXQfymRuvUG2btRTMLMPK6cVzWvNnkgLOSGmrhySEmHpMjyDHR0I6KNYMc0yh/B5NdB4vYPQfwT2RXAIUlQePRroLFQGS1z0u7kevNWa/S5lD/reBe6F68z4BzreJ5WowkuhfdsTp6AvPj1A6Z6+56kyTX1SFNRYJot61mXQLzywNwWA==
+    - secure: CwimfCH/eT55L/mMPp/mSAmTKf9JdLB4fdN9QtA1FT8KX+lxarkvaIojNzkGQKcUdm6wxiQ6F7L3gvfw7OQ2IJ9kqChY8JCg50dzFQoBeDerbePR1c+Wt19GORnnHvZCytHkMd5K2xUI1PcvKquvfBoPMZbGJRpmG7TsHM6Glhge7xhGkS7B8kqmY7t71jdANGTN3PgFpWK5SCQk6mB9M2C2akhWEzk9LiZdkC633x3hV0RooNlSRlGNCloStHWhtZ1/HLPr2GWvGYOY4y2vg00fLldMg9M2mHCSlahvsBpFIV24w/F/3GfKvdKED2sPRiwKje7WGv7qnTjW8tf7iA==
 
 build:
   ci:
@@ -13,23 +17,12 @@ build:
     - ./ci/test.sh
 
   post_ci:
-    - echo $NPM_TOKEN > ~/.npmrc
     - ./ci/publish.sh
 
 integrations:
   hub:
     - integrationName: personal_dockerhub
       type: docker
-
-  notifications:
-    - integrationName: trigger.retryerjs.pipelines
-      type: webhook
-      payload:
-        - versionName=${DOCKER_TAG#v}
-        - isRelease=$IS_RELEASE
-        - dockerImage=$DOCKER_IMAGE_NAME:$DOCKER_TAG
-      on_success: always
-      on_failure: never
 
 branches:
   only:
