@@ -20,16 +20,6 @@ integrations:
     - integrationName: personal_dockerhub
       type: docker
 
-  notifications:
-    - integrationName: trigger.retryerjs.pipelines
-      type: webhook
-      payload:
-        - versionName=${DOCKER_TAG#v}
-        - isRelease=$IS_RELEASE
-        - dockerImage=$DOCKER_IMAGE_NAME:$DOCKER_TAG
-      on_success: always
-      on_failure: never
-
 branches:
   only:
     - master
