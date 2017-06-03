@@ -16,8 +16,7 @@
   },
   "scripts": {
     "start": "babel-node send-request.js",
-    "test": "npm run test0 | faucet",
-    "test0": "babel-tape-runner test/**/*.spec.js",
+    "test": "babel-tape-runner test/**/*.spec.js | faucet",
     "build": "babel src -d dist",
     "send-request": "babel-node send-request.js"
   },
