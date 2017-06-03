@@ -16,10 +16,8 @@
     "tape": "^4.6.3"
   },
   "scripts": {
-    "start": "babel-node send-request.js",
     "test": "babel-tape-runner test/**/*.spec.js | faucet",
-    "build": "babel src -d dist",
-    "send-request": "babel-node send-request.js"
+    "build": "babel src -d dist"
   },
   "repository": {
     "type": "git",
