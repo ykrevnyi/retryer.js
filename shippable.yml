@@ -10,7 +10,7 @@ build:
     - $SHIPPABLE_BUILD_DIR/node_modules
 
   ci:
-    - npm install
+    - NODE_ENV=development npm install
     - npm test
 
 branches:
