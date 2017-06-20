@@ -1,0 +1,7 @@
+
+jobs:
+  - name: retryerjs_runCI
+    type: runCI
+    steps:
+      - IN: retryerjs_ciRepo
+      - OUT:
