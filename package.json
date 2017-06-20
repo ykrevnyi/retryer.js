@@ -1,6 +1,6 @@
 {
   "name": "retryer",
-  "version": "0.1.33",
+  "version": "0.2.0",
   "description": "",
   "main": "dist/index.js",
   "dependencies": {
