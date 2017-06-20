@@ -1,0 +1,13 @@
+
+machine:
+  node:
+    version: 0.10.22
+
+dependencies:
+  override:
+    - npm install --dev
+
+test:
+  override:
+    - npm test
+    # - './node_modules/.bin/nyc report --reporter=text-lcov'
