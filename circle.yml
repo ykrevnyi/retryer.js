@@ -1,13 +1,20 @@
 
 machine:
   node:
-    version: 0.10.22
+    version: 7.9
 
 dependencies:
+  pre:
+     - echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
   override:
     - npm install --dev
 
 test:
   override:
     - npm test
-    # - './node_modules/.bin/nyc report --reporter=text-lcov'
+
+deployment:
+  npm:
+    tag: /v[0-9]+(\.[0-9]+)*/
+        commands:
+      - npm publish
