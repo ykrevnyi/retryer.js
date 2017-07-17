@@ -6,11 +6,6 @@ export default class Retryer {
   constructor(promise, options) {
     options = options || {};
 
-    // Turn debug mode on by default
-    if (options.debug === undefined) {
-      options.debug = true;
-    }
-
     this._promise = promise;
     this._current = 0;
 
@@ -30,14 +25,8 @@ export default class Retryer {
   }
 
   _setNotifiers(options) {
-    if (options.debug) {
-      this._onStart = debugStartNotifier;
-      this._onError = debugErrorNotifier;
-      return;
-    }
-
-    this._onStart = options.onStart || function() {};
-    this._onError = options.onError || function() {};
+    this._onStart = options.onStart || debugStartNotifier;
+    this._onError = options.onError || debugErrorNotifier;
   }
 
   /**
