@@ -1,14 +1,15 @@
 
 [![Build Status](https://travis-ci.org/ykrevnyi/retryer.js.svg?branch=master)](https://travis-ci.org/ykrevnyi/retryer.js)
-[![License](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/ykrevnyi/retryer.js/blob/master/LICENSE)
 [![npm](https://img.shields.io/npm/dt/retryer.svg)](https://www.npmjs.com/package/retryer)
+[![License](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/ykrevnyi/retryer.js/blob/master/LICENSE)
+
 
 # retryer.js
 
 `retryer` is a tiny, battle tested library that enables you to retry promises.
 
 <p align="center">
-  <img src="https://github.com/ykrevnyi/reconnect/tree/master/docs/retryer-v1.5.1.gif" alt="retryer.js intro"/>
+  <img src="https://github.com/ykrevnyi/retryer.js/blob/master/docs/assets/retryer-v1.5.1.gif" alt="retryer.js intro"/>
 </p>
 
 ```javascript
