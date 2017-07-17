@@ -43,7 +43,7 @@ function sendRequest() {
 
 // STEP 2: Pass that function to the retry(FUNCTION_NAME)
 retry(sendRequest)
-  .then(data => winston.log('Connected 🎉'))
+  .then(data => winston.log('Connected'))
   .catch(error => winston.error('Not connected ¯\_(ツ)_/¯'))
 ```
 <h5 align="center">Full example is in <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/winston/index.js">index.js file</a><br>Cannot understand this example? Take a look at <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/basic/index.js">basic one</a></h5>
@@ -59,10 +59,10 @@ function sendRequest() {
 
 // STEP 2: Pass that function to the retry(FUNCTION_NAME)
 retry(sendRequest)
--  .then(data => winston.log('Connected 🎉'))
+-  .then(data => winston.log('Connected'))
 -  .catch(error => winston.error('Not connected ¯\_(ツ)_/¯'))
-+  .then(data => console.log('Connected 🎉'))
-+  .catch(error => console.log('error'))
++  .then(data => console.log('Connected'))
++  .catch(error => console.log('Not connected ¯\_(ツ)_/¯'))
 ```
 
 ## Test it yourself
