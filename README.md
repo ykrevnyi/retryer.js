@@ -59,7 +59,7 @@ Change `anything` you need to `fit` your needs.
 
 ## Custom loggers
 
-You can easely integrate custom logger. Take a look at example :
+You can easely integrate any custom logger. Take a look at example :
 * [`winson`](https://github.com/ykrevnyi/reconnect/tree/master/examples/winson): logger integration
 * [`bunyan`](https://github.com/ykrevnyi/reconnect/tree/master/examples/bunyan): logger integration
 
