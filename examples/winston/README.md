@@ -30,7 +30,7 @@ request('http://site.com/')
   .catch(error => console.log('Not connected ¯\_(ツ)_/¯'))
 ```
 
-### With `retryer` it looks like
+### With `winston & retryer` it looks like
 ```javascript
 import winston from 'winston';
 
@@ -47,19 +47,7 @@ retry(sendRequest)
   .catch(error => winston.error('Not connected ¯\_(ツ)_/¯'))
 ```
 <h5 align="center">Full example is in <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/winston/index.js">index.js file</a></h5>
-
-### With `winston` integration
-```javascript
-// STEP 1: create function that returns promise
-function sendRequest() {
-  return request('http://site.com/')
-}
-
-// STEP 2: Pass that function to the retry(FUNCTION_NAME)
-retry(sendRequest)
-  .then(data => console.log('Connected 🎉'))
-  .catch(error => console.log('error'))
-```
+<h5 align="center">Cannot understand this example? Take a look at <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/basic/index.js">basic one</a></h5>
 
 ## Prefer diff?
 ```diff
