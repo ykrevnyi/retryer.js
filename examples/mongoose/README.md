@@ -2,17 +2,17 @@
 <h1 align="center">How to reconnect to Mongoose.</h1>
 
 <p align="center">
-  <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/basic/">basic</a> &bull;
-  <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/request/">request</a> &bull;
+  <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/basic/">basic</a> &bull;
+  <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/request/">request</a> &bull;
   <b>mongoose</b> &bull;
-  <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/mongodb/">mongodb</a> &bull;
-  <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/redis/">redis</a> &bull;
-  <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/async-await/">async/await</a> &bull;
-  <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/advanced-options/">advanced-options</a>
+  <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/mongodb/">mongodb</a> &bull;
+  <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/redis/">redis</a> &bull;
+  <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/async-await/">async/await</a> &bull;
+  <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/advanced-options/">advanced-options</a>
 </p>
 
 <p align="center">
-  <img src="https://github.com/ykrevnyi/reconnect/blob/docs/docs/retryer-v1.5.1.gif" alt="retryer.js intro"/>
+  <img src="https://github.com/ykrevnyi/reconnect/tree/master/docs/retryer-v1.5.1.gif" alt="retryer.js intro"/>
 </p>
 
 In this `mongoose` example we will reconnect to the `mongodb` using `mongoose` library.
@@ -45,7 +45,7 @@ retry(mongooseConnect)
   .then(data => console.log('Connected 🎉'))
   .catch(err => console.log('error'));
 ```
-<h5 align="center">Full <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/mongoose/index.js">example here</a></h5>
+<h5 align="center">Full <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/mongoose/index.js">example here</a></h5>
 
 ## Prefer diff?
 ```diff

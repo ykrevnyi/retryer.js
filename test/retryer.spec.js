@@ -4,7 +4,6 @@ import Promise from 'bluebird';
 import DebugRetryer from '../src/DebugRetryer';
 
 test('Retryer Spec', t => {
-
   t.test('is green', t => {
     const res = true;
     t.equal(res, true);
@@ -38,15 +37,15 @@ test('Retryer Spec', t => {
 
     retry(promise, {total: 2})
       .then(data => {
-        t.fail('Promise should not be resolved')
+        t.fail('Promise should not be resolved');
       })
-      .catch(err => {
+      .catch(() => {
         t.equal(spies.init.callCount, 1);
         t.equal(spies.tick.callCount, 2);
         t.equal(spies.error.callCount, 1);
         t.equal(spies.success.callCount, 0);
         t.end();
-      })
+      });
   });
 
   t.test('retries N times with success', t => {
@@ -64,7 +63,7 @@ test('Retryer Spec', t => {
         t.equal(spies.success.callCount, 1, 'success');
         t.end();
       })
-      .catch(err => {
+      .catch(() => {
         t.fail('Promise should be resolved');
       });
   });
@@ -80,7 +79,7 @@ test('Retryer Spec', t => {
       .then(data => {
         t.fail('Promise should not be resolved');
       })
-      .catch(err => {
+      .catch(() => {
         t.equal(spies.init.callCount, 1);
         t.equal(spies.tick.callCount, 3, 'tick');
         t.equal(spies.error.callCount, 2, 'error');
@@ -104,7 +103,7 @@ test('Retryer Spec', t => {
         t.equal(spies.success.callCount, 1, 'success');
         t.end();
       })
-      .catch(err => {
+      .catch(() => {
         t.fail('Promise should be resolved.');
       });
   });
@@ -117,7 +116,7 @@ test('Retryer Spec', t => {
     let promise = failingPromise(6);
 
     retry(promise, {total: 5})
-      .then(err => {
+      .then(() => {
         t.fail('Promise should not be resolved.');
       })
       .catch(data => {
@@ -132,7 +131,6 @@ test('Retryer Spec', t => {
   t.test('notifies notifiers with correct values', t => {
     const retryer = getRetryer();
     const retry = retryer.retry;
-    const spies = retryer.spies;
 
     let promise = failingPromise(4);
     let onError = sinon.spy();
@@ -150,30 +148,27 @@ test('Retryer Spec', t => {
         // Check if notifiers received correct values
         t.same(onStart.args, [[1], [2], [3], [4], [5]]);
         t.same(onError.args, [
-            ['reject 1', 1],
-            ['reject 2', 2],
-            ['reject 3', 3],
-            ['reject 4', 4]
-          ]
+          [new Error('reject 1'), 1],
+          [new Error('reject 2'), 2],
+          [new Error('reject 3'), 3],
+          [new Error('reject 4'), 4]
+        ]
         );
 
         t.end();
       })
-      .catch(err => {
+      .catch(() => {
         t.fail('Promise should be resolved.');
       });
   });
 
   t.test('sets default notifiers on DEBUG flag', t => {
     const retryer = getRetryer({debug: true});
-    const retry = retryer.retry;
-    const spies = retryer.spies;
 
     t.equal(typeof retryer.instance._onStart, 'function');
     t.equal(typeof retryer.instance._onError, 'function');
     t.end();
   });
-
 });
 
 function getRetryer(options) {
@@ -206,18 +201,18 @@ function failingPromise(totaFails) {
       return Promise.resolve('success');
     }
 
-    return Promise.reject(`reject ${iteration}`);
-  }
+    return Promise.reject(new Error(`reject ${iteration}`));
+  };
 }
 
 function resolvePromise() {
   return function() {
     return Promise.resolve();
-  }
+  };
 }
 
 function rejectPromise() {
   return function() {
-    return Promise.reject();
-  }
+    return Promise.reject(new Error());
+  };
 }

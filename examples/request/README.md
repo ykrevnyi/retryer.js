@@ -2,17 +2,17 @@
 <h1 align="center">How to retry HTTP request.</h1>
 
 <p align="center">
-  <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/basic/">basic</a> &bull;
+  <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/basic/">basic</a> &bull;
   <b>request</b> &bull;
-  <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/mongoose/">mongoose</a> &bull;
-  <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/mongodb/">mongodb</a> &bull;
-  <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/redis/">redis</a> &bull;
-  <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/async-await/">async/await</a> &bull;
-  <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/advanced-options/">advanced options</a>
+  <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/mongoose/">mongoose</a> &bull;
+  <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/mongodb/">mongodb</a> &bull;
+  <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/redis/">redis</a> &bull;
+  <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/async-await/">async/await</a> &bull;
+  <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/advanced-options/">advanced options</a>
 </p>
 
 <p align="center">
-  <img src="https://github.com/ykrevnyi/reconnect/blob/docs/docs/retryer-v1.5.1.gif" alt="retryer.js intro"/>
+  <img src="https://github.com/ykrevnyi/reconnect/tree/master/docs/retryer-v1.5.1.gif" alt="retryer.js intro"/>
 </p>
 
 In this `request` example we will retry http requests.
@@ -40,7 +40,7 @@ retry(sendRequest)
   .then(data => console.log('Connected 🎉'))
   .catch(error => console.log('error'))
 ```
-<h5 align="center">Full examples are: <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/request/request.js">request</a> and <a href="https://github.com/ykrevnyi/reconnect/blob/docs/examples/request/request-promise.js">request-promise</a>.</h5>
+<h5 align="center">Full examples are: <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/request/request.js">request</a> and <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/request/request-promise.js">request-promise</a>.</h5>
 
 ## Prefer diff?
 ```diff
