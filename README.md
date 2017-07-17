@@ -43,6 +43,9 @@ Take a look at our many examples:
 - [`mongoose`](https://github.com/ykrevnyi/reconnect/tree/master/examples/mongoose): How to reconnect to Mongoose.
 - [`mongodb`](https://github.com/ykrevnyi/reconnect/tree/master/examples/mongodb): How to reconnect to MongoDB.
 - [`redis`](https://github.com/ykrevnyi/reconnect/tree/master/examples/redis): How to reconnect to Redis.
+- [`bluebird`](https://github.com/ykrevnyi/reconnect/tree/master/examples/bluebird): How to retry bluebird promise.
+- [`winson`](https://github.com/ykrevnyi/reconnect/tree/master/examples/winson): How to integrate winson logger.
+- [`bunyan`](https://github.com/ykrevnyi/reconnect/tree/master/examples/bunyan): How to integrate bunyan logger.
 - `Couldn't find appropriate example?` Create an issue and we will prepare one 💪
 
 ## Fully customisable
@@ -52,6 +55,9 @@ Change `anything` you need to `fit` your needs.
   <img src="https://github.com/ykrevnyi/reconnect/tree/master/docs/retryer-options-v1.0.1.gif" alt="retryer.js options"/>
 </p>
 <h5 align="center">How to <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/advanced-options">customise it?</a></h5>
+
+
+## 
 
 
 ## Available Options
