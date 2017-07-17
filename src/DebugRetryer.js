@@ -8,7 +8,6 @@ import sinon from 'sinon';
  * Does not have any additinal functional.
  */
 export default class DebugRetryer extends Retryer {
-
   constructor(promise, options) {
     super(promise, options);
 
@@ -43,5 +42,4 @@ export default class DebugRetryer extends Retryer {
 
     return super._backoff();
   }
-
 }

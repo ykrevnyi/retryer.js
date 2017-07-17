@@ -3,7 +3,6 @@ import debugStartNotifier from './notifiers/debugStartNotifier';
 import debugErrorNotifier from './notifiers/debugErrorNotifier';
 
 export default class Retryer {
-
   constructor(promise, options) {
     options = options || {};
 
@@ -101,8 +100,7 @@ export default class Retryer {
    *
    * @return {Boolean}
    */
-  _isLastAttempt(asdf) {
+  _isLastAttempt() {
     return this._current >= this._total;
   }
-
 }
