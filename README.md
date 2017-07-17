@@ -86,12 +86,12 @@ retry(fn, OPTIONS);
 
 ## Development
 
-### Code Quality
+#### Code Quality
 Run `npm run lint` to statically validate the code.
 
 Run `npm run test` to run the performance tests.
 
-### Performance Tests
+#### Performance Tests
 Run `npm run perf` to run the performance tests.
 
 ## Need Help?
