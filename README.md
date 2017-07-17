@@ -1,5 +1,7 @@
 
-[![CircleCI](https://circleci.com/gh/ykrevnyi/retryer.js.svg?style=svg)](https://circleci.com/gh/ykrevnyi/retryer.js)
+[![Build Status](https://travis-ci.org/ykrevnyi/retryer.js.svg?branch=master)](https://travis-ci.org/ykrevnyi/retryer.js)
+[![License](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/ykrevnyi/retryer.js/blob/master/LICENSE)
+[![npm](https://img.shields.io/npm/dt/retryer.svg)](https://www.npmjs.com/package/retryer)
 
 # retryer.js
 
