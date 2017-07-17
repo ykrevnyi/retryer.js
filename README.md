@@ -84,6 +84,16 @@ retry(fn, OPTIONS);
 ```
 <h5 align="center">Checkout full <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/advanced-options/index.js">example</a> or <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/advanced-options/">docs</a>.</h5>
 
+## Development
+
+### Code Quality
+Run `npm run lint` to statically validate the code.
+
+Run `npm run test` to run the performance tests.
+
+### Performance Tests
+Run `npm run perf` to run the performance tests.
+
 ## Need Help?
 Please submit an issue on GitHub and provide information about your setup.
 
