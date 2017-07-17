@@ -57,7 +57,13 @@ Change `anything` you need to `fit` your needs.
 <h5 align="center">How to <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/advanced-options">customise it?</a></h5>
 
 
-## 
+## Custom loggers
+
+You can easely integrate custom logger. Take a look at example :
+* [`winson`](https://github.com/ykrevnyi/reconnect/tree/master/examples/winson): logger integration
+* [`bunyan`](https://github.com/ykrevnyi/reconnect/tree/master/examples/bunyan): logger integration
+
+<h5 align="center">How to <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/advanced-options">customise it?</a></h5>
 
 
 ## Available Options
