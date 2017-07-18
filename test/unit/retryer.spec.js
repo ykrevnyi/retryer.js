@@ -1,7 +1,7 @@
 import test from 'tape';
 import sinon from 'sinon';
 import Promise from 'bluebird';
-import DebugRetryer from '../src/DebugRetryer';
+import DebugRetryer from '../../src/DebugRetryer';
 
 test('Retryer Spec', t => {
   t.test('is green', t => {

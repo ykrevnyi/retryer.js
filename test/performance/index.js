@@ -1,8 +1,8 @@
 
-import Benchmark from "benchmark";
-import DebugRetryer from '../src/DebugRetryer';
+import Benchmark from 'benchmark';
+import DebugRetryer from '../../src/DebugRetryer';
 
-var bench = new Benchmark('retry#resolve', {
+let bench = new Benchmark('retry#resolve', {
   'defer': true,
   'onCycle': function(event) {
     console.log(String(event.target));
@@ -15,7 +15,7 @@ var bench = new Benchmark('retry#resolve', {
     retry(promise)
       .then(data => {
         deferred.resolve();
-      })
+      });
   }
 });
 
