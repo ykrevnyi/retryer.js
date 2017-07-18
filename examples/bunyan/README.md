@@ -2,19 +2,19 @@
 <h1 align="center">Retryer.js Bunyan Integration</h1>
 
 <p align="center">
-  <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/basic/">basic</a> &bull;
-  <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/request/">request</a> &bull;
-  <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/mongoose/">mongoose</a> &bull;
-  <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/mongodb/">mongodb</a> &bull;
-  <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/redis/">redis</a> &bull;
-  <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/async-await/">async/await</a> &bull;
+  <a href="https://github.com/ykrevnyi/retryer.js/tree/master/examples/basic/">basic</a> &bull;
+  <a href="https://github.com/ykrevnyi/retryer.js/tree/master/examples/request/">request</a> &bull;
+  <a href="https://github.com/ykrevnyi/retryer.js/tree/master/examples/mongoose/">mongoose</a> &bull;
+  <a href="https://github.com/ykrevnyi/retryer.js/tree/master/examples/mongodb/">mongodb</a> &bull;
+  <a href="https://github.com/ykrevnyi/retryer.js/tree/master/examples/redis/">redis</a> &bull;
+  <a href="https://github.com/ykrevnyi/retryer.js/tree/master/examples/async-await/">async/await</a> &bull;
   <b>bunyan</b> &bull;
-  <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/winston/">winston</a> &bull;
-  <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/advanced-options/">advanced options</a>
+  <a href="https://github.com/ykrevnyi/retryer.js/tree/master/examples/winston/">winston</a> &bull;
+  <a href="https://github.com/ykrevnyi/retryer.js/tree/master/examples/advanced-options/">advanced options</a>
 </p>
 
 <p align="center">
-  <img src="https://github.com/ykrevnyi/reconnect/tree/master/docs/retryer-v1.5.1.gif" alt="retryer.js intro"/>
+  <img src="https://github.com/ykrevnyi/retryer.js/tree/master/docs/retryer-v1.5.1.gif" alt="retryer.js intro"/>
 </p>
 
 In this `bunyan` example we will integrate *bunyan* logger into *retryer.js*.
@@ -64,7 +64,7 @@ retry(sendRequest, retryerConfig)
   .catch(error => logger.error('Not connected 🤷‍'))
 
 ```
-<h5 align="center">Full example is in <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/bunyan/index.js">index.js file</a><br>Cannot understand this example? Take a look at <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/basic/index.js">basic one</a></h5>
+<h5 align="center">Full example is in <a href="https://github.com/ykrevnyi/retryer.js/tree/master/examples/bunyan/index.js">index.js file</a><br>Cannot understand this example? Take a look at <a href="https://github.com/ykrevnyi/retryer.js/tree/master/examples/basic/index.js">basic one</a></h5>
 
 ## Prefer diff?
 ```diff

@@ -2,19 +2,19 @@
 <h1 align="center">Advanced retryer.js configuration</h1>
 
 <p align="center">
-  <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/basic/">basic</a> &bull;
-  <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/request/">request</a> &bull;
-  <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/mongoose/">mongoose</a> &bull;
-  <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/mongodb/">mongodb</a> &bull;
-  <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/redis/">redis</a> &bull;
-  <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/async-await/">async/await</a> &bull;
-  <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/bunyan/">bunyan</a> &bull;
-  <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/winston/">winston</a> &bull;
+  <a href="https://github.com/ykrevnyi/retryer.js/tree/master/examples/basic/">basic</a> &bull;
+  <a href="https://github.com/ykrevnyi/retryer.js/tree/master/examples/request/">request</a> &bull;
+  <a href="https://github.com/ykrevnyi/retryer.js/tree/master/examples/mongoose/">mongoose</a> &bull;
+  <a href="https://github.com/ykrevnyi/retryer.js/tree/master/examples/mongodb/">mongodb</a> &bull;
+  <a href="https://github.com/ykrevnyi/retryer.js/tree/master/examples/redis/">redis</a> &bull;
+  <a href="https://github.com/ykrevnyi/retryer.js/tree/master/examples/async-await/">async/await</a> &bull;
+  <a href="https://github.com/ykrevnyi/retryer.js/tree/master/examples/bunyan/">bunyan</a> &bull;
+  <a href="https://github.com/ykrevnyi/retryer.js/tree/master/examples/winston/">winston</a> &bull;
   <b>advanced options</b>
 </p>
 
 <p align="center">
-  <img src="https://github.com/ykrevnyi/reconnect/tree/master/docs/retryer-options-v1.0.1.gif" alt="retryer.js options"/>
+  <img src="https://github.com/ykrevnyi/retryer.js/tree/master/docs/retryer-options-v1.0.1.gif" alt="retryer.js options"/>
 </p>
 
 In the `advanced-options` examples we will configure all available options for `retryer`.
@@ -54,7 +54,7 @@ retry(sendRequest, options})
   .then(data => console.log('Connected 🎉'))
   .catch(error => console.log('Not connected 🤷‍'))
 ```
-<h5 align="center">Full example is in <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/advanced-options/index.js">index.js file</a></h5>
+<h5 align="center">Full example is in <a href="https://github.com/ykrevnyi/retryer.js/tree/master/examples/advanced-options/index.js">index.js file</a></h5>
 
 ## Prefer diff?
 ```diff
@@ -83,10 +83,10 @@ function sendRequest() {
 ## Available Options
 **Option Name**|**Type**|**Default**|**Description**|**Example**
 :-------------:|:------:|:---------:|:-------------:|:--------:|
-`total`|`Number`|`10`|Number of attempts to retry|<a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/advanced-options/options-total.js">options-total.js</a>
-`timeout`|`Number`|`1000`|Backoff timeout (in ms)|<a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/advanced-options/options-timeout.js">options-timeout.js</a>
-`onStart`|`Function`|`function(attempt) {..}`|Is triggered on start for each attempt|<a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/advanced-options/options-on-start.js">options-on-start.js</a>
-`onError`|`Function`|`function(error, attempt) {..}`|Is triggered on error for each attempt|<a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/advanced-options/options-on-error.js">options-on-error.js</a>
+`total`|`Number`|`10`|Number of attempts to retry|<a href="https://github.com/ykrevnyi/retryer.js/tree/master/examples/advanced-options/options-total.js">options-total.js</a>
+`timeout`|`Number`|`1000`|Backoff timeout (in ms)|<a href="https://github.com/ykrevnyi/retryer.js/tree/master/examples/advanced-options/options-timeout.js">options-timeout.js</a>
+`onStart`|`Function`|`function(attempt) {..}`|Is triggered on start for each attempt|<a href="https://github.com/ykrevnyi/retryer.js/tree/master/examples/advanced-options/options-on-start.js">options-on-start.js</a>
+`onError`|`Function`|`function(error, attempt) {..}`|Is triggered on error for each attempt|<a href="https://github.com/ykrevnyi/retryer.js/tree/master/examples/advanced-options/options-on-error.js">options-on-error.js</a>
 
 ### How to Pass Options
 
@@ -106,7 +106,7 @@ retry(fn, OPTIONS);
 //
 // retry(sendRequest, options);
 ```
-<h5 align="center">Checkout full <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/advanced-options/index.js">example</a>.</h5>
+<h5 align="center">Checkout full <a href="https://github.com/ykrevnyi/retryer.js/tree/master/examples/advanced-options/index.js">example</a>.</h5>
 
 ## Custom log messages
 

@@ -24,7 +24,7 @@ retry(sendRequest)
   .catch(error => console.log('Not connected 🤷‍'))
 ```
 
-<h5 align="center">Checkout <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/basic/index.js">full example</a> or <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/basic">docs</a>.</h5>
+<h5 align="center">Checkout <a href="https://github.com/ykrevnyi/retryer.js/tree/master/examples/basic/index.js">full example</a> or <a href="https://github.com/ykrevnyi/retryer.js/tree/master/examples/basic">docs</a>.</h5>
 
 ## Install
 You can get it on npm.
@@ -36,41 +36,41 @@ npm install --save retryer
 
 Take a look at our many examples:
 
-- [`basic`](https://github.com/ykrevnyi/reconnect/tree/master/examples/basic): How to retry promise.
-- [`request`](https://github.com/ykrevnyi/reconnect/tree/master/examples/request): How to retry HTTP request.
-- [`mongoose`](https://github.com/ykrevnyi/reconnect/tree/master/examples/mongoose): How to reconnect to Mongoose.
-- [`mongodb`](https://github.com/ykrevnyi/reconnect/tree/master/examples/mongodb): How to reconnect to MongoDB.
-- [`redis`](https://github.com/ykrevnyi/reconnect/tree/master/examples/redis): How to reconnect to Redis.
-- [`async/await`](https://github.com/ykrevnyi/reconnect/tree/master/examples/async-await): How to retry async/await.
-- [`bluebird`](https://github.com/ykrevnyi/reconnect/tree/master/examples/bluebird): How to retry bluebird promise.
-- [`bunyan`](https://github.com/ykrevnyi/reconnect/tree/master/examples/bunyan): How to integrate bunyan logger.
-- [`winson`](https://github.com/ykrevnyi/reconnect/tree/master/examples/winson): How to integrate winson logger.
-- [`advanced-options`](https://github.com/ykrevnyi/reconnect/tree/master/examples/advanced-options): How to use options and customise log messages.
+- [`basic`](https://github.com/ykrevnyi/retryer.js/tree/master/examples/basic): How to retry promise.
+- [`request`](https://github.com/ykrevnyi/retryer.js/tree/master/examples/request): How to retry HTTP request.
+- [`mongoose`](https://github.com/ykrevnyi/retryer.js/tree/master/examples/mongoose): How to reconnect to Mongoose.
+- [`mongodb`](https://github.com/ykrevnyi/retryer.js/tree/master/examples/mongodb): How to reconnect to MongoDB.
+- [`redis`](https://github.com/ykrevnyi/retryer.js/tree/master/examples/redis): How to reconnect to Redis.
+- [`async/await`](https://github.com/ykrevnyi/retryer.js/tree/master/examples/async-await): How to retry async/await.
+- [`bluebird`](https://github.com/ykrevnyi/retryer.js/tree/master/examples/bluebird): How to retry bluebird promise.
+- [`bunyan`](https://github.com/ykrevnyi/retryer.js/tree/master/examples/bunyan): How to integrate bunyan logger.
+- [`winson`](https://github.com/ykrevnyi/retryer.js/tree/master/examples/winson): How to integrate winson logger.
+- [`advanced-options`](https://github.com/ykrevnyi/retryer.js/tree/master/examples/advanced-options): How to use options and customise log messages.
 - `Couldn't find appropriate example?` Create an issue and we will prepare one 💪
 
 ## Fully customisable
 Change `anything` you need to `fit` your needs.
 
 <p align="center">
-  <img src="https://github.com/ykrevnyi/reconnect/tree/master/docs/retryer-options-v1.0.1.gif" alt="retryer.js options"/>
+  <img src="https://github.com/ykrevnyi/retryer.js/tree/master/docs/retryer-options-v1.0.1.gif" alt="retryer.js options"/>
 </p>
-<h5 align="center">How to <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/advanced-options">customise it?</a></h5>
+<h5 align="center">How to <a href="https://github.com/ykrevnyi/retryer.js/tree/master/examples/advanced-options">customise it?</a></h5>
 
 
 ### Custom loggers
 
 You can easely integrate any custom logger. Take a look at examples:
-* [`winson`](https://github.com/ykrevnyi/reconnect/tree/master/examples/winson): logger integration
-* [`bunyan`](https://github.com/ykrevnyi/reconnect/tree/master/examples/bunyan): logger integration
+* [`winson`](https://github.com/ykrevnyi/retryer.js/tree/master/examples/winson): logger integration
+* [`bunyan`](https://github.com/ykrevnyi/retryer.js/tree/master/examples/bunyan): logger integration
 
 
 ### Available Options
 **Option Name**|**Type**|**Default**|**Description**|**Example**
 :-------------:|:------:|:---------:|:-------------:|:--------:|
-`total`|`Number`|`10`|Number of attempts to retry|<a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/advanced-options/options-total.js">options-total.js</a>
-`timeout`|`Number`|`1000`|Backoff timeout (in ms)|<a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/advanced-options/options-timeout.js">options-timeout.js</a>
-`onStart`|`Function`|`function(attempt) {..}`|Is triggered on start for each attempt|<a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/advanced-options/options-on-start.js">options-on-start.js</a>
-`onError`|`Function`|`function(error, attempt) {..}`|Is triggered on error for each attempt|<a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/advanced-options/options-on-error.js">options-on-error.js</a>
+`total`|`Number`|`10`|Number of attempts to retry|<a href="https://github.com/ykrevnyi/retryer.js/tree/master/examples/advanced-options/options-total.js">options-total.js</a>
+`timeout`|`Number`|`1000`|Backoff timeout (in ms)|<a href="https://github.com/ykrevnyi/retryer.js/tree/master/examples/advanced-options/options-timeout.js">options-timeout.js</a>
+`onStart`|`Function`|`function(attempt) {..}`|Is triggered on start for each attempt|<a href="https://github.com/ykrevnyi/retryer.js/tree/master/examples/advanced-options/options-on-start.js">options-on-start.js</a>
+`onError`|`Function`|`function(error, attempt) {..}`|Is triggered on error for each attempt|<a href="https://github.com/ykrevnyi/retryer.js/tree/master/examples/advanced-options/options-on-error.js">options-on-error.js</a>
 
 #### How to Pass Options?
 
@@ -90,7 +90,7 @@ retry(fn, OPTIONS);
 //
 // retry(sendRequest, options);
 ```
-<h5 align="center">Checkout full <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/advanced-options/index.js">example</a> or <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/advanced-options/">docs</a>.</h5>
+<h5 align="center">Checkout full <a href="https://github.com/ykrevnyi/retryer.js/tree/master/examples/advanced-options/index.js">example</a> or <a href="https://github.com/ykrevnyi/retryer.js/tree/master/examples/advanced-options/">docs</a>.</h5>
 
 ## Development
 

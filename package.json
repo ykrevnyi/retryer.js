@@ -1,7 +1,7 @@
 {
   "name": "retryer",
   "version": "1.0.0",
-  "description": "",
+  "description": "retryer is a tiny, battle tested library that enables you to retry promises.",
   "main": "dist/index.js",
   "dependencies": {
     "bluebird": "^3.4.6"
@@ -32,12 +32,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ykrevnyi/reconnect.git"
+    "url": "git+https://github.com/ykrevnyi/retryer.js.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ykrevnyi/reconnect/issues"
+    "url": "https://github.com/ykrevnyi/retryer.js/issues"
   },
-  "homepage": "https://github.com/ykrevnyi/reconnect#readme"
+  "homepage": "https://github.com/ykrevnyi/retryer.js#readme"
 }
