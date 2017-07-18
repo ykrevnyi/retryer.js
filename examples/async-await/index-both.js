@@ -16,13 +16,13 @@ async function retryAsync() {
 // ❌ (Wrong)   retry(sendRequest())
 // retry(sendRequest)
 //   .then(data => console.log('Connected 🎉'))
-//   .catch(error => console.log('error'))
+//   .catch(error => console.log('Not connected ¯\\_(ツ)_/¯'))
 retryAsync(sendRequest)
   .then(data => console.log('Connected 🎉'))
-  .catch(error => console.log('error'))
+  .catch(error => console.log('Not connected ¯\\_(ツ)_/¯'))
 
 // BTW
 // Here is how your code looks like without `retryer`
 // request('http://site.com/')
 //   .then(data => console.log('Connected 🎉'))
-//   .catch(error => console.log('error'))
+//   .catch(error => console.log('Not connected ¯\\_(ツ)_/¯'))

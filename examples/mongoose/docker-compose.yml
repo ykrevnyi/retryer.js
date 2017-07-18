@@ -11,4 +11,4 @@ services:
       - /home/app/mongoose-example/node_modules
 
   mongodb:
-    image: mongo:3.2.8
+    image: mongo:3.2.15

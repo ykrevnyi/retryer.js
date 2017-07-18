@@ -17,7 +17,7 @@ function mongodbConnect() {
 // ❌ (Wrong)   retry(mongodbConnect())
 retry(mongodbConnect)
   .then(data => console.log('Connected 🎉'))
-  .catch(err => console.log('error'));
+  .catch(error => console.log('Not connected ¯\_(ツ)_/¯'))
 
 
 // BTW

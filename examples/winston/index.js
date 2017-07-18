@@ -4,9 +4,7 @@ import retry from 'retryer';
 
 // STEP 1. Initialize logger
 var logger = new (winston.Logger)({
-  transports: [
-    new (winston.transports.Console)({ raw: true }),
-  ]
+  transports: [new (winston.transports.Console)({raw: true})]
 });
 
 // STEP 2: create function that returns promise
@@ -29,4 +27,4 @@ var retryerConfig = {
 
 retry(sendRequest, retryerConfig)
   .then(data => logger.log('info', 'Connected'))
-  .catch(error => logger.error('info', 'Not connected ¯\_(ツ)_/¯'))
+  .catch(error => logger.error('info', 'Not connected ¯\\_(ツ)_/¯'))

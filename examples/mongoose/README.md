@@ -1,5 +1,5 @@
 
-<h1 align="center">How to reconnect to Mongoose.</h1>
+<h1 align="center">How to reconnect to Mongoose</h1>
 
 <p align="center">
   <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/basic/">basic</a> &bull;
@@ -8,7 +8,9 @@
   <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/mongodb/">mongodb</a> &bull;
   <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/redis/">redis</a> &bull;
   <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/async-await/">async/await</a> &bull;
-  <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/advanced-options/">advanced-options</a>
+  <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/bunyan/">bunyan</a> &bull;
+  <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/winston/">winston</a> &bull;
+  <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/advanced-options/">advanced options</a>
 </p>
 
 <p align="center">
@@ -23,7 +25,7 @@ In this `mongoose` example we will reconnect to the `mongodb` using `mongoose` l
 
 ```javascript
 mongoose.connect('mongodb://localhost/test');
-mongoose.connection.on('error', console.log('error'));
+mongoose.connection.on('error', console.log('Not connected ¯\\_(ツ)_/¯'));
 mongoose.connection.once('open', function() {
   console.log('Connected 🎉');
 });
@@ -43,7 +45,7 @@ function mongooseConnect() {
 // STEP 3: Pass that function to the retry(FUNCTION_NAME)
 retry(mongooseConnect)
   .then(data => console.log('Connected 🎉'))
-  .catch(err => console.log('error'));
+  .catch(err => console.log('Not connected ¯\\_(ツ)_/¯'));
 ```
 <h5 align="center">Full <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/mongoose/index.js">example here</a></h5>
 
@@ -55,17 +57,17 @@ retry(mongooseConnect)
 +function mongooseConnect() {
 +  return mongoose.connect('mongodb://mongodb/test-db');
 +}
--mongoose.connection.on('error', console.log('error'));
+-mongoose.connection.on('error', console.log('Not connected ¯\\_(ツ)_/¯'));
 -mongoose.connection.once('open', function() {
 -  console.log('Connected 🎉');
 -});
 
 +retry(mongooseConnect)
 +  .then(data => console.log('Connected 🎉'))
-+  .catch(err => console.log('error'););
++  .catch(err => console.log('Not connected ¯\\_(ツ)_/¯'););
 ```
 
-## Test it yourself
+## Try it yourself
 ### Using `Docker`
 Clone GitHub repository.
 ```bash
@@ -116,4 +118,4 @@ npm start
 ```
 
 ## Need Help?
-Please submit an issue on GitHub and provide information about your setup.
+Please [submit an issue](https://github.com/ykrevnyi/retryer.js/issues) on GitHub and provide information about your setup.

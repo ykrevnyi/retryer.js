@@ -3,7 +3,6 @@ import retry from 'retryer';
 
 // Define options
 const options = {
-  debug: false,
   timeout: 2500,
   total: 3,
   onStart,

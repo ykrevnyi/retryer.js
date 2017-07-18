@@ -7,7 +7,7 @@ mongoose.Promise = Promise;
 
 // STEP 2: Create function that returns mongoose' promise
 function mongooseConnect() {
-  return mongoose.connect('mongodb://mongodb/test-db');
+  return mongoose.connect('mongodb://mongodb/test-db', {useMongoClient: true});
 }
 
 // STEP 3: Pass that function to the retry(FUNCTION_NAME)
@@ -16,14 +16,14 @@ function mongooseConnect() {
 // ❌ (Wrong)   retry(mongooseConnect())
 retry(mongooseConnect)
   .then(data => console.log('Connected 🎉'))
-  .catch(err => console.log('error'));
+  .catch(error => console.log('Not connected ¯\_(ツ)_/¯'))
 
 
 // BTW
 // Here is how your code looks like without `retryer`
 // mongoose.connect('mongodb://localhost/test');
 // var db = mongoose.connection;
-// db.on('error', console.log('error'));
+// db.on('error', console.log('Not connected ¯\\_(ツ)_/¯'));
 // db.once('open', function() {
 //   console.log('connected!');
 // });

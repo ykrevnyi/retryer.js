@@ -1,7 +1,7 @@
 // Hey, how are you?
 // Consider using `request-promise` instead of `request`
 
-import Promise from 'Bluebird';
+import Promise from 'bluebird';
 import request from 'request';
 import retry from 'retryer';
 
@@ -18,7 +18,7 @@ function sendRequest() {
 // ❌ (Wrong)   retry(sendRequest())
 retry(sendRequest)
   .then(data => console.log('Connected 🎉'))
-  .catch(error => console.log('error'))
+  .catch(error => console.log('Not connected ¯\\_(ツ)_/¯'))
 
 
 // BTW

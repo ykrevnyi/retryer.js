@@ -1,9 +1,9 @@
-FROM node:7.1.0
+FROM node:7.1.0-alpine
 
 ENV service=mongoose-example
 ENV appPath=/home/app
 
-RUN useradd --user-group --create-home --shell /bin/false app
+RUN addgroup -S app && adduser -S -g app app
 
 RUN mkdir -p $appPath/$service
 COPY package.json $appPath/$service

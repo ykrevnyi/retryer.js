@@ -1,14 +1,16 @@
 
-<h1 align="center">How to use options and customise log messages.</h1>
+<h1 align="center">Advanced Retryer configuration</h1>
 
 <p align="center">
-  <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/basic">basic</a> &bull;
-  <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/request">request</a> &bull;
-  <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/mongoose">mongoose</a> &bull;
-  <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/mongodb">mongodb</a> &bull;
-  <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/redis">redis</a> &bull;
-  <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/async-await">async/await</a> &bull;
-  <b>advanced-options</b>
+  <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/basic/">basic</a> &bull;
+  <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/request/">request</a> &bull;
+  <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/mongoose/">mongoose</a> &bull;
+  <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/mongodb/">mongodb</a> &bull;
+  <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/redis/">redis</a> &bull;
+  <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/async-await/">async/await</a> &bull;
+  <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/bunyan/">bunyan</a> &bull;
+  <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/winston/">winston</a> &bull;
+  <b>advanced options</b>
 </p>
 
 <p align="center">
@@ -28,13 +30,12 @@ function sendRequest() {
 
 retry(sendRequest, options})
   .then(data => console.log('Connected 🎉'))
-  .catch(error => console.log('error'))
+  .catch(error => console.log('Not connected ¯\\_(ツ)_/¯'))
 ```
 
 ### With custom options it looks like
 ```javascript
 const options = {
-  debug: true, // show debug information
   total: 5, // retry 5 times
   timeout: 2000, // wait 2sec between retries
   onStart: attempt => {
@@ -51,14 +52,13 @@ function sendRequest() {
 
 retry(sendRequest, options})
   .then(data => console.log('Connected 🎉'))
-  .catch(error => console.log('error'))
+  .catch(error => console.log('Not connected ¯\\_(ツ)_/¯'))
 ```
 <h5 align="center">Full example is in <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/basic/index.js">index.js file</a></h5>
 
 ## Prefer diff?
 ```diff
 +const options = {
-+  debug: true, // show debug information
 +  total: 5, // retry 5 times
 +  timeout: 2000, // wait 2sec between retries
 +  onStart: attempt => {
@@ -76,18 +76,17 @@ function sendRequest() {
 -retry(sendRequest)
 +retry(sendRequest, options)
   .then(data => console.log('Connected 🎉'))
-  .catch(error => console.log('error'))
+  .catch(error => console.log('Not connected ¯\\_(ツ)_/¯'))
 ```
 
 
 ## Available Options
 **Option Name**|**Type**|**Default**|**Description**|**Example**
 :-------------:|:------:|:---------:|:-------------:|:--------:|
-`debug`|`Boolean`|`false`|Log debug information|<a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/advanced-options/options-debug.js">options-debug.js</a>
 `total`|`Number`|`10`|Number of attempts to retry|<a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/advanced-options/options-total.js">options-total.js</a>
 `timeout`|`Number`|`1000`|Backoff timeout (in ms)|<a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/advanced-options/options-timeout.js">options-timeout.js</a>
-`_onStart`|`Function`|`function(attempt) {..}`|Is triggered on start for each attempt|<a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/advanced-options/options-on-start.js">options-on-start.js</a>
-`_onError`|`Function`|`function(error, attempt) {..}`|Is triggered on error for each attempt|<a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/advanced-options/options-on-error.js">options-on-error.js</a>
+`onStart`|`Function`|`function(attempt) {..}`|Is triggered on start for each attempt|<a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/advanced-options/options-on-start.js">options-on-start.js</a>
+`onError`|`Function`|`function(error, attempt) {..}`|Is triggered on error for each attempt|<a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/advanced-options/options-on-error.js">options-on-error.js</a>
 
 ### How to Pass Options
 
@@ -99,7 +98,6 @@ retry(fn, OPTIONS);
 
 // Example: retry request 3 times with 2.5s timeout
 // const options = {
-//   debug: false,
 //   timeout: 2500,
 //   total: 3,
 //   function(attempt) {..},
@@ -146,5 +144,26 @@ retry(sendRequest, options)
   .catch(..)
 ```
 
+## Try it yourself
+Clone GitHub repository.
+```bash
+git clone https://github.com/ykrevnyi/retryer.js
+```
+
+Open `basic` example.
+```bash
+cd retryer.js/examples/advanced-options
+```
+
+Install dependencies.
+```bash
+npm install
+```
+
+Start `basic` example.
+```bash
+npm start
+```
+
 ## Need Help?
-Please submit an issue on GitHub and provide information about your setup.
+Please [submit an issue](https://github.com/ykrevnyi/retryer.js/issues) on GitHub and provide information about your setup.

@@ -21,7 +21,7 @@ function sendRequest() {
 // STEP 2: Pass that function to the retry(FUNCTION_NAME)
 retry(sendRequest)
   .then(data => console.log('Connected 🎉'))
-  .catch(error => console.log('error'))
+  .catch(error => console.log('Not connected ¯\_(ツ)_/¯'))
 ```
 
 <h5 align="center">Checkout <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/basic/index.js">full example</a> or <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/basic">docs</a>.</h5>
@@ -38,14 +38,14 @@ Take a look at our many examples:
 
 - [`basic`](https://github.com/ykrevnyi/reconnect/tree/master/examples/basic): How to retry promise.
 - [`request`](https://github.com/ykrevnyi/reconnect/tree/master/examples/request): How to retry HTTP request.
-- [`advanced-options`](https://github.com/ykrevnyi/reconnect/tree/master/examples/advanced-options): How to use options and customise log messages.
-- [`async/await`](https://github.com/ykrevnyi/reconnect/tree/master/examples/async-await): How to use async/await.
 - [`mongoose`](https://github.com/ykrevnyi/reconnect/tree/master/examples/mongoose): How to reconnect to Mongoose.
 - [`mongodb`](https://github.com/ykrevnyi/reconnect/tree/master/examples/mongodb): How to reconnect to MongoDB.
 - [`redis`](https://github.com/ykrevnyi/reconnect/tree/master/examples/redis): How to reconnect to Redis.
+- [`async/await`](https://github.com/ykrevnyi/reconnect/tree/master/examples/async-await): How to retry async/await.
 - [`bluebird`](https://github.com/ykrevnyi/reconnect/tree/master/examples/bluebird): How to retry bluebird promise.
-- [`winson`](https://github.com/ykrevnyi/reconnect/tree/master/examples/winson): How to integrate winson logger.
 - [`bunyan`](https://github.com/ykrevnyi/reconnect/tree/master/examples/bunyan): How to integrate bunyan logger.
+- [`winson`](https://github.com/ykrevnyi/reconnect/tree/master/examples/winson): How to integrate winson logger.
+- [`advanced-options`](https://github.com/ykrevnyi/reconnect/tree/master/examples/advanced-options): How to use options and customise log messages.
 - `Couldn't find appropriate example?` Create an issue and we will prepare one 💪
 
 ## Fully customisable
@@ -57,7 +57,7 @@ Change `anything` you need to `fit` your needs.
 <h5 align="center">How to <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/advanced-options">customise it?</a></h5>
 
 
-## Custom loggers
+### Custom loggers
 
 You can easely integrate any custom logger. Take a look at examples:
 * [`winson`](https://github.com/ykrevnyi/reconnect/tree/master/examples/winson): logger integration
@@ -66,7 +66,7 @@ You can easely integrate any custom logger. Take a look at examples:
 <h5 align="center">How to <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/advanced-options">customise it?</a></h5>
 
 
-## Available Options
+### Available Options
 **Option Name**|**Type**|**Default**|**Description**|**Example**
 :-------------:|:------:|:---------:|:-------------:|:--------:|
 `total`|`Number`|`10`|Number of attempts to retry|<a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/advanced-options/options-total.js">options-total.js</a>
@@ -74,7 +74,7 @@ You can easely integrate any custom logger. Take a look at examples:
 `onStart`|`Function`|`function(attempt) {..}`|Is triggered on start for each attempt|<a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/advanced-options/options-on-start.js">options-on-start.js</a>
 `onError`|`Function`|`function(error, attempt) {..}`|Is triggered on error for each attempt|<a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/advanced-options/options-on-error.js">options-on-error.js</a>
 
-### How to Pass Options?
+#### How to Pass Options?
 
 Pass an `options` as a `second` argument.
 
@@ -105,7 +105,7 @@ Run `npm run test` to run unit tests.
 Run `npm run perf` to run the performance tests.
 
 ## Need Help?
-Please submit an issue on GitHub and provide information about your setup.
+Please [submit an issue](https://github.com/ykrevnyi/retryer.js/issues) on GitHub and provide information about your setup.
 
 ## License
-This project is licensed under the terms of the MIT license. See the LICENSE file.
+This project is licensed under the terms of the MIT license. See the [LICENSE file](https://github.com/ykrevnyi/retryer.js/blob/master/LICENSE).

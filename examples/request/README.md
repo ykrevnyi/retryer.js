@@ -1,5 +1,5 @@
 
-<h1 align="center">How to retry HTTP request.</h1>
+<h1 align="center">How to retry HTTP request</h1>
 
 <p align="center">
   <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/basic/">basic</a> &bull;
@@ -8,6 +8,8 @@
   <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/mongodb/">mongodb</a> &bull;
   <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/redis/">redis</a> &bull;
   <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/async-await/">async/await</a> &bull;
+  <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/bunyan/">bunyan</a> &bull;
+  <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/winston/">winston</a> &bull;
   <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/advanced-options/">advanced options</a>
 </p>
 
@@ -25,7 +27,7 @@ In this `request` example we will retry http requests.
 // Consider using `request-promise` instead of `request`
 request('http://site.com/')
   .then(data => console.log('Connected 🎉'))
-  .catch(error => console.log('error'))
+  .catch(error => console.log('Not connected ¯\\_(ツ)_/¯'))
 ```
 
 ### With `retryer` it looks like
@@ -38,7 +40,7 @@ function sendRequest() {
 // STEP 2: Pass that function to the retry(FUNCTION_NAME)
 retry(sendRequest)
   .then(data => console.log('Connected 🎉'))
-  .catch(error => console.log('error'))
+  .catch(error => console.log('Not connected ¯\\_(ツ)_/¯'))
 ```
 <h5 align="center">Full examples are: <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/request/request.js">request</a> and <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/request/request-promise.js">request-promise</a>.</h5>
 
@@ -51,10 +53,10 @@ retry(sendRequest)
 -request('http://site.com/')
 +retry(sendRequest)
   .then(data => console.log('Connected 🎉'))
-  .catch(error => console.log('error'))
+  .catch(error => console.log('Not connected ¯\\_(ツ)_/¯'))
 ```
 
-## Test it yourself
+## Try it yourself
 Clone GitHub repository.
 ```bash
 git clone https://github.com/ykrevnyi/retryer.js
@@ -72,8 +74,12 @@ npm install
 
 Start `basic` example.
 ```bash
+# using 'request-promise' pacakge
 npm start
+# or
+# using 'request' pacakge
+# npm run start-without-promise
 ```
 
 ## Need Help?
-Please submit an issue on GitHub and provide information about your setup.
+Please [submit an issue](https://github.com/ykrevnyi/retryer.js/issues) on GitHub and provide information about your setup.

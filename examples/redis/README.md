@@ -1,5 +1,5 @@
 
-<h1 align="center">How to reconnect to Redis.</h1>
+<h1 align="center">How to reconnect to Redis</h1>
 
 <p align="center">
   <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/basic/">basic</a> &bull;
@@ -8,7 +8,9 @@
   <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/mongodb/">mongodb</a> &bull;
   <b>redis</b> &bull;
   <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/async-await/">async/await</a> &bull;
-  <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/advanced-options/">advanced-options</a>
+  <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/bunyan/">bunyan</a> &bull;
+  <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/winston/">winston</a> &bull;
+  <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/advanced-options/">advanced options</a>
 </p>
 
 <p align="center">
@@ -25,7 +27,7 @@ In this `redis` example we will reconnect to the `Redis` data store.
 const client = redis.createClient('redis://redis/0');
 
 client.on('ready', data => console.log('Connected 🎉'));
-client.on('error', err => console.log('error'));
+client.on('error', err => console.log('Not connected ¯\\_(ツ)_/¯'));
 ```
 
 ### With `retryer` it looks 100% same
@@ -35,11 +37,11 @@ client.on('error', err => console.log('error'));
 const client = redis.createClient('redis://redis/0');
 
 client.on('ready', data => console.log('Connected 🎉'));
-client.on('error', err => console.log('error'));
+client.on('error', err => console.log('Not connected ¯\\_(ツ)_/¯'));
 ```
 <h5 align="center">Full <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/redis/index.js">example here</a></h5>
 
-## Test it yourself
+## Try it yourself
 ### Using `Docker`
 Clone GitHub repository.
 ```bash
@@ -89,4 +91,4 @@ npm start
 ```
 
 ## Need Help?
-Please submit an issue on GitHub and provide information about your setup.
+Please [submit an issue](https://github.com/ykrevnyi/retryer.js/issues) on GitHub and provide information about your setup.

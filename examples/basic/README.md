@@ -8,6 +8,8 @@
   <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/mongodb/">mongodb</a> &bull;
   <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/redis/">redis</a> &bull;
   <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/async-await/">async/await</a> &bull;
+  <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/bunyan/">bunyan</a> &bull;
+  <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/winston/">winston</a> &bull;
   <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/advanced-options/">advanced options</a>
 </p>
 
@@ -25,7 +27,7 @@ In this `basic` example we will take a look at the most simple request retry.
 // Send request to the http://site.com/
 request('http://site.com/')
   .then(data => console.log('Connected 🎉'))
-  .catch(error => console.log('error'))
+  .catch(error => console.log('Not connected ¯\\_(ツ)_/¯'))
 ```
 
 ### With `retryer` it looks like
@@ -38,7 +40,7 @@ function sendRequest() {
 // STEP 2: Pass that function to the retry(FUNCTION_NAME)
 retry(sendRequest)
   .then(data => console.log('Connected 🎉'))
-  .catch(error => console.log('error'))
+  .catch(error => console.log('Not connected ¯\\_(ツ)_/¯'))
 ```
 <h5 align="center">Full example is in <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/basic/index.js">index.js file</a></h5>
 
@@ -51,10 +53,10 @@ retry(sendRequest)
 -request('http://site.com/')
 +retry(sendRequest)
   .then(data => console.log('Connected 🎉'))
-  .catch(error => console.log('error'))
+  .catch(error => console.log('Not connected ¯\\_(ツ)_/¯'))
 ```
 
-## Test it yourself
+## Try it yourself
 Clone GitHub repository.
 ```bash
 git clone https://github.com/ykrevnyi/retryer.js
@@ -121,4 +123,4 @@ Want to see `diff`?
 ```
 
 ## Need Help?
-Please submit an issue on GitHub and provide information about your setup.
+Please [submit an issue](https://github.com/ykrevnyi/retryer.js/issues) on GitHub and provide information about your setup.
