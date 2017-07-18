@@ -14,7 +14,7 @@
 </p>
 
 <p align="center">
-  <img src="https://github.com/ykrevnyi/retryer.js/tree/master/docs/assets/retryer-options-v1.0.1.gif" alt="retryer.js options"/>
+  <img src="https://github.com/ykrevnyi/retryer.js/tree/master/assets/retryer-options-v1.0.1.gif" alt="retryer.js options"/>
 </p>
 
 In the `advanced-options` examples we will configure all available options for `retryer`.

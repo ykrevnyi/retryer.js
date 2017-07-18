@@ -14,7 +14,7 @@
 </p>
 
 <p align="center">
-  <img src="https://github.com/ykrevnyi/retryer.js/tree/master/docs/assets/retryer-v1.5.1.gif" alt="retryer.js intro"/>
+  <img src="https://github.com/ykrevnyi/retryer.js/tree/master/assets/retryer-v1.5.1.gif" alt="retryer.js intro"/>
 </p>
 
 In this `bunyan` example we will integrate *bunyan* logger into *retryer.js*.
