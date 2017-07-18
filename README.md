@@ -59,7 +59,7 @@ Change `anything` you need to `fit` your needs.
 
 ## Custom loggers
 
-You can easely integrate any custom logger. Take a look at example :
+You can easely integrate any custom logger. Take a look at examples:
 * [`winson`](https://github.com/ykrevnyi/reconnect/tree/master/examples/winson): logger integration
 * [`bunyan`](https://github.com/ykrevnyi/reconnect/tree/master/examples/bunyan): logger integration
 
@@ -69,11 +69,10 @@ You can easely integrate any custom logger. Take a look at example :
 ## Available Options
 **Option Name**|**Type**|**Default**|**Description**|**Example**
 :-------------:|:------:|:---------:|:-------------:|:--------:|
-`debug`|`Boolean`|`false`|Log debug information|<a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/advanced-options/options-debug.js">options-debug.js</a>
 `total`|`Number`|`10`|Number of attempts to retry|<a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/advanced-options/options-total.js">options-total.js</a>
 `timeout`|`Number`|`1000`|Backoff timeout (in ms)|<a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/advanced-options/options-timeout.js">options-timeout.js</a>
-`_onStart`|`Function`|`function(attempt) {..}`|Is triggered on start for each attempt|<a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/advanced-options/options-on-start.js">options-on-start.js</a>
-`_onError`|`Function`|`function(error, attempt) {..}`|Is triggered on error for each attempt|<a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/advanced-options/options-on-error.js">options-on-error.js</a>
+`onStart`|`Function`|`function(attempt) {..}`|Is triggered on start for each attempt|<a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/advanced-options/options-on-start.js">options-on-start.js</a>
+`onError`|`Function`|`function(error, attempt) {..}`|Is triggered on error for each attempt|<a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/advanced-options/options-on-error.js">options-on-error.js</a>
 
 ### How to Pass Options?
 
@@ -85,7 +84,6 @@ retry(fn, OPTIONS);
 
 // Example: retry request 3 times with 2.5s timeout
 // const options = {
-//   debug: false,
 //   timeout: 2500,
 //   total: 3,
 //   function(attempt) {..},
