@@ -16,6 +16,6 @@
     "bunyan": "^1.8.10",
     "request": "^2.79.0",
     "request-promise": "^4.1.1",
-    "retryer": "^0.4.5"
+    "retryer": "^1.1.2"
   }
 }

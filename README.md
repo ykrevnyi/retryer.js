@@ -25,7 +25,7 @@ retry(sendRequest)
   .catch(error => console.log('Not connected 🤷‍'))
 ```
 
-<h5 align="center">Checkout <a href="https://github.com/ykrevnyi/retryer.js/tree/master/examples/basic/index.js">full example</a> or <a href="https://github.com/ykrevnyi/retryer.js/tree/master/examples/basic">docs</a>.</h5>
+<h5 align="center">Checkout <a href="https://github.com/ykrevnyi/retryer.js/tree/master/examples/basic/index.js">full example</a> or <a href="https://github.com/ykrevnyi/retryer.js/tree/master/examples/basic">step by step guide</a>.</h5>
 
 ## Install
 You can get it on npm.
@@ -91,7 +91,7 @@ retry(fn, OPTIONS);
 //
 // retry(sendRequest, options);
 ```
-<h5 align="center">Checkout full <a href="https://github.com/ykrevnyi/retryer.js/tree/master/examples/advanced-options/index.js">example</a> or <a href="https://github.com/ykrevnyi/retryer.js/tree/master/examples/advanced-options/">docs</a>.</h5>
+<h5 align="center">Checkout full <a href="https://github.com/ykrevnyi/retryer.js/tree/master/examples/advanced-options/index.js">example</a> or <a href="https://github.com/ykrevnyi/retryer.js/tree/master/examples/advanced-options/">step by step guide</a>.</h5>
 
 ## Development
 
