@@ -27,7 +27,7 @@ In this `request` example we will retry http requests.
 // Consider using `request-promise` instead of `request`
 request('http://site.com/')
   .then(data => console.log('Connected 🎉'))
-  .catch(error => console.log('Not connected ¯\\_(ツ)_/¯'))
+  .catch(error => console.log('Not connected 🤷‍'))
 ```
 
 ### With `retryer` it looks like
@@ -40,7 +40,7 @@ function sendRequest() {
 // STEP 2: Pass that function to the retry(FUNCTION_NAME)
 retry(sendRequest)
   .then(data => console.log('Connected 🎉'))
-  .catch(error => console.log('Not connected ¯\\_(ツ)_/¯'))
+  .catch(error => console.log('Not connected 🤷‍'))
 ```
 <h5 align="center">Full examples are: <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/request/request.js">request</a> and <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/request/request-promise.js">request-promise</a>.</h5>
 
@@ -53,7 +53,7 @@ retry(sendRequest)
 -request('http://site.com/')
 +retry(sendRequest)
   .then(data => console.log('Connected 🎉'))
-  .catch(error => console.log('Not connected ¯\\_(ツ)_/¯'))
+  .catch(error => console.log('Not connected 🤷‍'))
 ```
 
 ## Try it yourself

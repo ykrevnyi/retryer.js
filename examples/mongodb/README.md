@@ -48,7 +48,7 @@ function mongodbConnect() {
 // STEP 3: Pass that function to the retry(FUNCTION_NAME)
 retry(mongodbConnect)
   .then(data => console.log('Connected 🎉'))
-  .catch(err => console.log('Not connected ¯\\_(ツ)_/¯'))
+  .catch(err => console.log('Not connected 🤷‍'))
 ```
 <h5 align="center">Full <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/mongodb/index.js">example here</a></h5>
 
@@ -71,7 +71,7 @@ retry(mongodbConnect)
 
 +retry(mongodbConnect)
 +  .then(data => console.log('Connected 🎉'))
-+  .catch(err => console.log('Not connected ¯\\_(ツ)_/¯'))
++  .catch(err => console.log('Not connected 🤷‍'))
 ```
 
 ## Try it yourself

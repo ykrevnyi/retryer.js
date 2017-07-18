@@ -26,4 +26,4 @@ var retryerConfig = {
 // STEP 4: Don't forget to implement final handlers
 retry(sendRequest, retryerConfig)
   .then(data => logger.info('Connected'))
-  .catch(error => logger.error('Not connected ¯\\_(ツ)_/¯'))
+  .catch(error => logger.error('Not connected 🤷‍'))

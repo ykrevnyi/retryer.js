@@ -16,14 +16,14 @@ function mongooseConnect() {
 // ❌ (Wrong)   retry(mongooseConnect())
 retry(mongooseConnect)
   .then(data => console.log('Connected 🎉'))
-  .catch(error => console.log('Not connected ¯\_(ツ)_/¯'))
+  .catch(error => console.log('Not connected 🤷‍'))
 
 
 // BTW
 // Here is how your code looks like without `retryer`
 // mongoose.connect('mongodb://localhost/test');
 // var db = mongoose.connection;
-// db.on('error', console.log('Not connected ¯\\_(ツ)_/¯'));
+// db.on('error', console.log('Not connected 🤷‍'));
 // db.once('open', function() {
 //   console.log('connected!');
 // });

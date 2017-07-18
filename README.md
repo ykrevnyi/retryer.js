@@ -21,7 +21,7 @@ function sendRequest() {
 // STEP 2: Pass that function to the retry(FUNCTION_NAME)
 retry(sendRequest)
   .then(data => console.log('Connected 🎉'))
-  .catch(error => console.log('Not connected ¯\_(ツ)_/¯'))
+  .catch(error => console.log('Not connected 🤷‍'))
 ```
 
 <h5 align="center">Checkout <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/basic/index.js">full example</a> or <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/basic">docs</a>.</h5>
@@ -62,8 +62,6 @@ Change `anything` you need to `fit` your needs.
 You can easely integrate any custom logger. Take a look at examples:
 * [`winson`](https://github.com/ykrevnyi/reconnect/tree/master/examples/winson): logger integration
 * [`bunyan`](https://github.com/ykrevnyi/reconnect/tree/master/examples/bunyan): logger integration
-
-<h5 align="center">How to <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/advanced-options">customise it?</a></h5>
 
 
 ### Available Options

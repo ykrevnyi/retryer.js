@@ -27,7 +27,7 @@ In this `redis` example we will reconnect to the `Redis` data store.
 const client = redis.createClient('redis://redis/0');
 
 client.on('ready', data => console.log('Connected 🎉'));
-client.on('error', err => console.log('Not connected ¯\\_(ツ)_/¯'));
+client.on('error', err => console.log('Not connected 🤷‍'));
 ```
 
 ### With `retryer` it looks 100% same
@@ -37,7 +37,7 @@ client.on('error', err => console.log('Not connected ¯\\_(ツ)_/¯'));
 const client = redis.createClient('redis://redis/0');
 
 client.on('ready', data => console.log('Connected 🎉'));
-client.on('error', err => console.log('Not connected ¯\\_(ツ)_/¯'));
+client.on('error', err => console.log('Not connected 🤷‍'));
 ```
 <h5 align="center">Full <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/redis/index.js">example here</a></h5>
 

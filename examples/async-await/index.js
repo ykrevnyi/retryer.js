@@ -12,7 +12,7 @@ async function sendRequest() {
 // ❌ (Wrong)   retry(sendRequest())
 retry(sendRequest)
   .then(data => console.log('Connected 🎉'))
-  .catch(error => console.log('Not connected ¯\\_(ツ)_/¯'))
+  .catch(error => console.log('Not connected 🤷‍'))
 
 
 // BTW
@@ -23,4 +23,4 @@ retry(sendRequest)
 //
 // sendRequest()
 //   .then(data => console.log('Connected 🎉'))
-//   .catch(error => console.log('Not connected ¯\\_(ツ)_/¯'))
+//   .catch(error => console.log('Not connected 🤷‍'))

@@ -32,7 +32,7 @@ function sendRequest() {
 // STEP 2: Pass that function to the retry(FUNCTION_NAME)
 retry(sendRequest)
   .then(data => console.log('Connected 🎉'))
-  .catch(error => console.log('Not connected ¯\\_(ツ)_/¯'))
+  .catch(error => console.log('Not connected 🤷‍'))
 ```
 
 ### With `bunyan & retryer` it looks like
@@ -61,7 +61,7 @@ var retryerConfig = {
 // STEP 4: Don't forget to implement final handlers
 retry(sendRequest, retryerConfig)
   .then(data => logger.info('Connected'))
-  .catch(error => logger.error('Not connected ¯\\_(ツ)_/¯'))
+  .catch(error => logger.error('Not connected 🤷‍'))
 
 ```
 <h5 align="center">Full example is in <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/bunyan/index.js">index.js file</a><br>Cannot understand this example? Take a look at <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/basic/index.js">basic one</a></h5>
@@ -93,9 +93,9 @@ function sendRequest() {
 + retry(sendRequest, retryerConfig)
 - retry(sendRequest)
 +   .then(data => logger.info('Connected'))
-+   .catch(error => logger.error('Not connected ¯\\_(ツ)_/¯'))
++   .catch(error => logger.error('Not connected 🤷‍'))
 -   .then(data => console.log('Connected'))
--   .catch(error => console.log('Not connected ¯\_(ツ)_/¯'))
+-   .catch(error => console.log('Not connected 🤷‍'))
 
 ```
 

@@ -25,7 +25,7 @@ In this `mongoose` example we will reconnect to the `mongodb` using `mongoose` l
 
 ```javascript
 mongoose.connect('mongodb://localhost/test');
-mongoose.connection.on('error', console.log('Not connected ¯\\_(ツ)_/¯'));
+mongoose.connection.on('error', console.log('Not connected 🤷‍'));
 mongoose.connection.once('open', function() {
   console.log('Connected 🎉');
 });
@@ -45,7 +45,7 @@ function mongooseConnect() {
 // STEP 3: Pass that function to the retry(FUNCTION_NAME)
 retry(mongooseConnect)
   .then(data => console.log('Connected 🎉'))
-  .catch(err => console.log('Not connected ¯\\_(ツ)_/¯'));
+  .catch(err => console.log('Not connected 🤷‍'));
 ```
 <h5 align="center">Full <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/mongoose/index.js">example here</a></h5>
 
@@ -57,14 +57,14 @@ retry(mongooseConnect)
 +function mongooseConnect() {
 +  return mongoose.connect('mongodb://mongodb/test-db');
 +}
--mongoose.connection.on('error', console.log('Not connected ¯\\_(ツ)_/¯'));
+-mongoose.connection.on('error', console.log('Not connected 🤷‍'));
 -mongoose.connection.once('open', function() {
 -  console.log('Connected 🎉');
 -});
 
 +retry(mongooseConnect)
 +  .then(data => console.log('Connected 🎉'))
-+  .catch(err => console.log('Not connected ¯\\_(ツ)_/¯'););
++  .catch(err => console.log('Not connected 🤷‍'););
 ```
 
 ## Try it yourself

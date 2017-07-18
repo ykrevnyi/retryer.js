@@ -1,5 +1,5 @@
 
-<h1 align="center">Advanced Retryer configuration</h1>
+<h1 align="center">Advanced retryer.js configuration</h1>
 
 <p align="center">
   <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/basic/">basic</a> &bull;
@@ -30,7 +30,7 @@ function sendRequest() {
 
 retry(sendRequest, options})
   .then(data => console.log('Connected 🎉'))
-  .catch(error => console.log('Not connected ¯\\_(ツ)_/¯'))
+  .catch(error => console.log('Not connected 🤷‍'))
 ```
 
 ### With custom options it looks like
@@ -52,9 +52,9 @@ function sendRequest() {
 
 retry(sendRequest, options})
   .then(data => console.log('Connected 🎉'))
-  .catch(error => console.log('Not connected ¯\\_(ツ)_/¯'))
+  .catch(error => console.log('Not connected 🤷‍'))
 ```
-<h5 align="center">Full example is in <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/basic/index.js">index.js file</a></h5>
+<h5 align="center">Full example is in <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/advanced-options/index.js">index.js file</a></h5>
 
 ## Prefer diff?
 ```diff
@@ -76,7 +76,7 @@ function sendRequest() {
 -retry(sendRequest)
 +retry(sendRequest, options)
   .then(data => console.log('Connected 🎉'))
-  .catch(error => console.log('Not connected ¯\\_(ツ)_/¯'))
+  .catch(error => console.log('Not connected 🤷‍'))
 ```
 
 
@@ -150,7 +150,7 @@ Clone GitHub repository.
 git clone https://github.com/ykrevnyi/retryer.js
 ```
 
-Open `basic` example.
+Open `advanced options` example.
 ```bash
 cd retryer.js/examples/advanced-options
 ```
@@ -160,7 +160,7 @@ Install dependencies.
 npm install
 ```
 
-Start `basic` example.
+Start `advanced options` example.
 ```bash
 npm start
 ```

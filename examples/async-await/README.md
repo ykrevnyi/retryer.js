@@ -30,7 +30,7 @@ async function sendRequest() {
 
 sendRequest()
   .then(data => console.log('Connected 🎉'))
-  .catch(error => console.log('Not connected ¯\\_(ツ)_/¯'))
+  .catch(error => console.log('Not connected 🤷‍'))
 ```
 
 ### With `retryer` it looks like
@@ -41,7 +41,7 @@ async function sendRequest() {
 
 retry(sendRequest)
   .then(data => console.log('Connected 🎉'))
-  .catch(error => console.log('Not connected ¯\\_(ツ)_/¯'))
+  .catch(error => console.log('Not connected 🤷‍'))
 ```
 <h5 align="center">Full examples are: <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/async-await/index.js">async single</a> and <a href="https://github.com/ykrevnyi/reconnect/tree/master/examples/async-await/index-both.js">async both</a>.</h5>
 
@@ -54,7 +54,7 @@ async function sendRequest() {
 -sendRequest()
 +retry(sendRequest)
   .then(data => console.log('Connected 🎉'))
-  .catch(error => console.log('Not connected ¯\\_(ツ)_/¯'))
+  .catch(error => console.log('Not connected 🤷‍'))
 ```
 
 ## Try it yourself
