@@ -28,7 +28,7 @@
     "test": "babel-tape-runner test/**/*.spec.js | faucet",
     "build": "babel src -d dist",
     "lint": "eslint benchmarks src test --fix",
-    "bench": "babel-node benchmark/index.js"
+    "perf": "babel-node test/performance/index.js"
   },
   "repository": {
     "type": "git",
