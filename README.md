@@ -45,7 +45,7 @@ Take a look at our many examples:
 - [`async/await`](https://github.com/ykrevnyi/retryer.js/tree/master/examples/async-await): How to retry async/await.
 - [`bluebird`](https://github.com/ykrevnyi/retryer.js/tree/master/examples/bluebird): How to retry bluebird promise.
 - [`bunyan`](https://github.com/ykrevnyi/retryer.js/tree/master/examples/bunyan): How to integrate bunyan logger.
-- [`winson`](https://github.com/ykrevnyi/retryer.js/tree/master/examples/winson): How to integrate winson logger.
+- [`winston`](https://github.com/ykrevnyi/retryer.js/tree/master/examples/winston): How to integrate winston logger.
 - [`advanced-options`](https://github.com/ykrevnyi/retryer.js/tree/master/examples/advanced-options): How to use options and customise log messages.
 - `Couldn't find appropriate example?` Create an issue and we will prepare one 💪
 
@@ -61,7 +61,7 @@ Change `anything` you need to `fit` your needs.
 ### Custom loggers
 
 You can easely integrate any custom logger. Take a look at examples:
-* [`winson`](https://github.com/ykrevnyi/retryer.js/tree/master/examples/winson): logger integration
+* [`winston`](https://github.com/ykrevnyi/retryer.js/tree/master/examples/winston): logger integration
 * [`bunyan`](https://github.com/ykrevnyi/retryer.js/tree/master/examples/bunyan): logger integration
 
 
