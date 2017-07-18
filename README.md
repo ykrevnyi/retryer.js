@@ -1,17 +1,18 @@
 
+<div align="center">
+
+# retryer.js
+##### retryer.js is a tiny, battle tested library that enables you to retry promises.
+[![GitHub release](https://img.shields.io/github/release/ykrevnyi/retryer.js.svg)](https://github.com/ykrevnyi/retryer.js/releases/tag/v1.1.1)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/f0d909662a7849dbbfeb33782dda6b32)](https://www.codacy.com/app/ykrevnyi/retryer.js?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ykrevnyi/retryer.js&amp;utm_campaign=Badge_Grade)
 [![Build Status](https://travis-ci.org/ykrevnyi/retryer.js.svg?branch=master)](https://travis-ci.org/ykrevnyi/retryer.js)
 [![npm](https://img.shields.io/npm/dt/retryer.svg)](https://www.npmjs.com/package/retryer)
 [![License](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/ykrevnyi/retryer.js/blob/master/LICENSE)
 
+<img src="https://github.com/ykrevnyi/retryer.js/blob/master/docs/assets/retryer-v1.5.1.gif" alt="retryer.js intro"/>
+</div>
 
-# retryer.js
-
-`retryer` is a tiny, battle tested library that enables you to retry promises.
-
-<p align="center">
-  <img src="https://github.com/ykrevnyi/retryer.js/blob/master/docs/assets/retryer-v1.5.1.gif" alt="retryer.js intro"/>
-</p>
-
+## Quickstart
 ```javascript
 // STEP 1: create function that returns promise
 function sendRequest() {
