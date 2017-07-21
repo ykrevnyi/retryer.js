@@ -66,7 +66,7 @@ retry(sendRequest, retryerConfig)
   .catch(error => logger.error('info', 'Not connected 🤷‍'))
 
 ```
-<h5 align="center">Full example is in <a href="https://github.com/ykrevnyi/retryer.js/tree/master/examples/winston/index.js">index.js file</a><br>Cannot understand this example? Take a look at <a href="https://github.com/ykrevnyi/retryer.js/tree/master/examples/basic/index.js">basic one</a></h5>
+<h5 align="center">Full example is in <a href="https://github.com/ykrevnyi/retryer.js/tree/master/examples/winston/index.js">index.js file</a><br>Cannot understand this example? Take a look at <a href="https://github.com/ykrevnyi/retryer.js/tree/master/examples/basic">basic one</a></h5>
 
 ## Prefer diff?
 ```diff
