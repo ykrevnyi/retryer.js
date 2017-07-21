@@ -14,7 +14,7 @@
 </p>
 
 <p align="center">
-  <img src="https://github.com/ykrevnyi/retryer.js/tree/master/assets/retryer-v1.5.1.gif" alt="retryer.js intro"/>
+  <img src="https://github.com/ykrevnyi/retryer.js/blob/master/assets/retryer-v1.5.1.gif" alt="retryer.js intro"/>
 </p>
 
 In this `basic` example we will take a look at the most simple request retry.
