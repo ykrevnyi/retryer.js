@@ -1,6 +1,9 @@
 import request from 'request-promise';
 import retry from 'retryer';
 
+// Get url from env
+const URL = process.env.RETRYER_URL || 'http://site.com/'
+
 // Define options
 const options = {
   timeout: 2500,
@@ -11,7 +14,7 @@ const options = {
 
 // STEP 1: create function that returns promise
 function sendRequest() {
-  return request('http://google.com/');
+  return request(URL);
 }
 
 // STEP 2: Pass that function to the retry(FUNCTION_NAME, OPTIONS)

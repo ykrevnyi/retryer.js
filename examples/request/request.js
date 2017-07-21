@@ -5,11 +5,13 @@ import Promise from 'bluebird';
 import request from 'request';
 import retry from 'retryer';
 
+// Get url from env
+const URL = process.env.RETRYER_URL || 'http://site.com/'
 const requestPromise = Promise.promisify(request);
 
 // STEP 1: create function that returns promise
 function sendRequest() {
-  return requestPromise('http://site.com/');
+  return requestPromise(URL);
 }
 
 // STEP 2: Pass that function to the retry(FUNCTION_NAME)
@@ -23,7 +25,7 @@ retry(sendRequest)
 
 // BTW
 // Here is how your code looks like without `retryer`
-// request('http://site.com/', (err, data) => {
+// request(URL, (err, data) => {
 //   if (err) {
 //     return console.log(`error`);
 //   }

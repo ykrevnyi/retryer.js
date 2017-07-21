@@ -1,9 +1,12 @@
 import request from 'request-promise';
 import retry from 'retryer';
 
+// Get url from env
+const URL = process.env.RETRYER_URL || 'http://site.com/'
+
 // STEP 1: create function that returns promise
 async function sendRequest() {
-   await request('http://site.com/')
+   await request(URL)
 }
 
 // STEP 2: Pass that function to the retry(FUNCTION_NAME)
@@ -18,7 +21,7 @@ retry(sendRequest)
 // BTW
 // Here is how your code looks like without `retryer`
 // async function sendRequest() {
-//    await request('http://site.com/')
+//    await request(URL)
 // }
 //
 // sendRequest()

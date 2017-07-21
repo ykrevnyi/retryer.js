@@ -1,9 +1,12 @@
 import request from 'request-promise';
 import retry from 'retryer';
 
+// Get url from env
+const URL = process.env.RETRYER_URL || 'http://site.com/'
+
 // STEP 1: create function that returns promise
 async function sendRequest() {
-   await request('http://site.com/')
+   await request(URL)
 }
 
 async function retryAsync() {
@@ -23,6 +26,6 @@ retryAsync(sendRequest)
 
 // BTW
 // Here is how your code looks like without `retryer`
-// request('http://site.com/')
+// request(URL)
 //   .then(data => console.log('Connected 🎉'))
 //   .catch(error => console.log('Not connected 🤷‍'))

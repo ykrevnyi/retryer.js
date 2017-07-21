@@ -2,12 +2,15 @@ import request from 'request-promise';
 import bunyan from 'bunyan';
 import retry from 'retryer';
 
+// Get url from env
+const URL = process.env.RETRYER_URL || 'http://site.com/'
+
 // STEP 1. Initialize logger
 const logger = bunyan.createLogger({name: "mylogger"});
 
 // STEP 2: create function that returns promise
 function sendRequest() {
-   return request('http://site.com/')
+   return request(URL)
 }
 
 // STEP 3: Pass implement 'onStart' and/or 'onError' handlers

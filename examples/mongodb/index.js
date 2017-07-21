@@ -3,12 +3,15 @@ import Promise from 'bluebird';
 import assert from 'assert';
 import retry from 'retryer';
 
+// Get url from env
+const URL = process.env.RETRYER_URL || 'mongodb://mongodb/test-db'
+
 // STEP 1: Promisify mongodb
 const connectPromise = Promise.promisify(MongoClient.connect);
 
 // STEP 2: Create function that returns mongodb' promise
 function mongodbConnect() {
-  return connectPromise('mongodb://mongodb/test-db');
+  return connectPromise(URL);
 }
 
 // STEP 3: Pass that function to the retry(FUNCTION_NAME)
@@ -22,7 +25,7 @@ retry(mongodbConnect)
 
 // BTW
 // Here is how your code looks like without `retryer`
-// MongoClient.connect('mongodb://mongodb/test-db', handler);
+// MongoClient.connect(URL, handler);
 //
 // function handler(err, db) {
 //   if (err) {

@@ -2,12 +2,15 @@ import mongoose from 'mongoose';
 import Promise from 'bluebird';
 import retry from 'retryer';
 
+// Get url from env
+const URL = process.env.RETRYER_URL || 'mongodb://mongodb/test-db'
+
 // STEP 1: Promisify mongoose
 mongoose.Promise = Promise;
 
 // STEP 2: Create function that returns mongoose' promise
 function mongooseConnect() {
-  return mongoose.connect('mongodb://mongodb/test-db', {useMongoClient: true});
+  return mongoose.connect(URL, {useMongoClient: true});
 }
 
 // STEP 3: Pass that function to the retry(FUNCTION_NAME)
@@ -21,7 +24,7 @@ retry(mongooseConnect)
 
 // BTW
 // Here is how your code looks like without `retryer`
-// mongoose.connect('mongodb://localhost/test');
+// mongoose.connect(URL);
 // var db = mongoose.connection;
 // db.on('error', console.log('Not connected 🤷‍'));
 // db.once('open', function() {
