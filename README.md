@@ -53,7 +53,7 @@ Take a look at our many examples:
 Change `anything` you need to `fit` your needs.
 
 <p align="center">
-  <img src="https://github.com/ykrevnyi/retryer.js/tree/master/assets/retryer-options-v1.0.1.gif" alt="retryer.js options"/>
+  <img src="https://github.com/ykrevnyi/retryer.js/blob/master/assets/retryer-options-v1.0.1.gif" alt="retryer.js options"/>
 </p>
 <h5 align="center">How to <a href="https://github.com/ykrevnyi/retryer.js/tree/master/examples/advanced-options">customise it?</a></h5>
 
