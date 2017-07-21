@@ -14,7 +14,7 @@
 </p>
 
 <p align="center">
-  <img src="https://github.com/ykrevnyi/retryer.js/blob/master/assets/retryer-v1.5.1.gif" alt="retryer.js intro"/>
+  <img width="70%" src="https://github.com/ykrevnyi/retryer.js/blob/master/assets/basic-70-10-v0.1.0.gif" alt="retryer.js intro"/>
 </p>
 
 In this `basic` example we will take a look at the most simple request retry.
@@ -75,6 +75,8 @@ npm install
 Start `basic` example.
 ```bash
 npm start
+# or
+# RETRYER_URL=http://non-existing-resource npm start
 ```
 
 ## A bit of explanation

@@ -14,7 +14,7 @@
 </p>
 
 <p align="center">
-  <img src="https://github.com/ykrevnyi/retryer.js/blob/master/assets/retryer-v1.5.1.gif" alt="retryer.js intro"/>
+  <img width="70%" src="https://github.com/ykrevnyi/retryer.js/blob/master/assets/basic-70-10-v0.1.0.gif" alt="retryer.js intro"/>
 </p>
 
 In this `request` example we will retry http requests.
@@ -76,9 +76,10 @@ Start `basic` example.
 ```bash
 # using 'request-promise' pacakge
 npm start
-# or
 # using 'request' pacakge
-# npm run start-without-promise
+npm run start-without-promise
+# or
+# RETRYER_URL=http://non-existing-resource npm start
 ```
 
 ## Need Help?

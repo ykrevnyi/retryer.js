@@ -14,7 +14,7 @@
 </p>
 
 <p align="center">
-  <img src="https://github.com/ykrevnyi/retryer.js/blob/master/assets/retryer-v1.5.1.gif" alt="retryer.js intro"/>
+  <img width="70%" src="https://github.com/ykrevnyi/retryer.js/blob/master/assets/mongodb-65-10-v0.1.0.gif" alt="retryer.js intro"/>
 </p>
 
 In this `mongodb` example we will reconnect to the `MongoDB`.
@@ -94,6 +94,8 @@ docker-compose build mongodb-example
 Start `mongodb` example.
 ```bash
 docker-compose run --rm mongodb-example npm start
+# or
+# docker-compose run -e RETRYER_URL=mongodb://non-existing --rm mongodb-example npm start
 ```
 
 ### Not Using `Docker`
@@ -122,6 +124,8 @@ npm install
 Start `mongodb` example.
 ```bash
 npm start
+# or
+# RETRYER_URL=mongodb://non-existing npm start
 ```
 
 ## Need Help?

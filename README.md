@@ -43,7 +43,7 @@ Take a look at our many examples:
 - [`mongodb`](https://github.com/ykrevnyi/retryer.js/tree/master/examples/mongodb): How to reconnect to MongoDB.
 - [`redis`](https://github.com/ykrevnyi/retryer.js/tree/master/examples/redis): How to reconnect to Redis.
 - [`async/await`](https://github.com/ykrevnyi/retryer.js/tree/master/examples/async-await): How to retry async/await.
-- [`bluebird`](https://github.com/ykrevnyi/retryer.js/tree/master/examples/bluebird): How to retry bluebird promise.
+- [`bluebird`](https://github.com/ykrevnyi/retryer.js/tree/master/examples/basic): How to retry bluebird promise.
 - [`bunyan`](https://github.com/ykrevnyi/retryer.js/tree/master/examples/bunyan): How to integrate bunyan logger.
 - [`winston`](https://github.com/ykrevnyi/retryer.js/tree/master/examples/winston): How to integrate winston logger.
 - [`advanced-options`](https://github.com/ykrevnyi/retryer.js/tree/master/examples/advanced-options): How to use options and customise log messages.

@@ -14,7 +14,7 @@
 </p>
 
 <p align="center">
-  <img src="https://github.com/ykrevnyi/retryer.js/tree/master/assets/retryer-options-v1.0.1.gif" alt="retryer.js options"/>
+  <img width="70%" src="https://github.com/ykrevnyi/retryer.js/tree/master/assets/advanced-options-65-10-v0.1.0.gif" alt="retryer.js options"/>
 </p>
 
 In the `advanced-options` examples we will configure all available options for `retryer`.
@@ -163,6 +163,8 @@ npm install
 Start `advanced options` example.
 ```bash
 npm start
+# or
+# RETRYER_URL=http://non-existing-resource npm start
 ```
 
 ## Need Help?

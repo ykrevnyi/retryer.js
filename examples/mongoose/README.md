@@ -14,7 +14,7 @@
 </p>
 
 <p align="center">
-  <img src="https://github.com/ykrevnyi/retryer.js/blob/master/assets/retryer-v1.5.1.gif" alt="retryer.js intro"/>
+  <img width="70%" src="https://github.com/ykrevnyi/retryer.js/blob/master/assets/mongoose-65-10-v0.1.0.gif" alt="retryer.js intro"/>
 </p>
 
 In this `mongoose` example we will reconnect to the `mongodb` using `mongoose` library.
@@ -87,6 +87,8 @@ docker-compose build mongoose-example
 Start `mongoose` example.
 ```bash
 docker-compose run --rm mongoose-example npm start
+# or
+# docker-compose run -e RETRYER_URL=mongodb://non-existing --rm mongoose-example npm start
 ```
 
 ### Not Using `Docker`
@@ -115,6 +117,8 @@ npm install
 Start `mongoose` example.
 ```bash
 npm start
+# or
+# RETRYER_URL=mongodb://non-existing npm start
 ```
 
 ## Need Help?
