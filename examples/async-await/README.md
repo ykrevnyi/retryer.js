@@ -14,7 +14,7 @@
 </p>
 
 <p align="center">
-  <img with="80" src="https://github.com/ykrevnyi/retryer.js/blob/master/assets/async-await-65-10-v0.1.0.gif" alt="retryer.js intro"/>
+  <img width="70%" src="https://github.com/ykrevnyi/retryer.js/blob/master/assets/async-await-65-10-v0.1.0.gif" alt="retryer.js intro"/>
 </p>
 
 In this `async-await` example we will take a look at async/await usage.
